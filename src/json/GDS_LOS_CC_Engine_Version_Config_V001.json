@@ -1,0 +1,2307 @@
+{
+  "summaryPageSections": [
+    {
+      "name": "LoanInformation",
+      "title": "Loan Information",
+      "cssClass": "summaryPage-leftalign summaryPage-border",
+      "isVisible": true,
+      "postData": "borrowers[0].offerData"
+    },
+    {
+      "name": "PrimaryBorrower",
+      "title": "Primary Borrower Information",
+      "cssClass": "summaryPage-leftalign summaryPage-border summaryPage-border-bottom-none",
+      "isVisible": true,
+      "postData": "borrowers[0]"
+    },
+    {
+      "name": "EmploymentInformation",
+      "title": "Employment Information",
+      "cssClass": "summaryPage-leftalign summaryPage-border employmentText summaryPage-border-top-none ",
+      "isVisible": true,
+      "postData": "borrowers[0].employmentInformation[0]"
+    },
+    {
+      "name": "CheckBoxSection",
+      "cssClass": "summaryPage-leftalign summaryPage-border employmentText summaryPage-border-top-none ",
+      "isVisible": true,
+      "postData": "borrowers[0].employmentInformation[0]"
+    },
+    {
+      "name": "CoBorrower",
+      "title": "Co-borrower Information",
+      "cssClass": "summaryPage-leftalign summaryPage-border",
+      "isVisible": true,
+      "postData": "borrowers[1]"
+    }
+  ],
+  "rules": [
+    {
+      "field": "StartDate",
+      "compareField": "DateOfBirth",
+      "source": "State",
+      "type": "Date",
+      "operator": ">",
+      "threshhold": "15",
+      "thresholdType": "Year",
+      "customMessage": "Start date is not valid. Please enter proper start date."
+    },
+    {
+      "field": "EndDate",
+      "compareField": "StartDate",
+      "source": "State",
+      "type": "Date",
+      "operator": ">",
+      "threshhold": "0",
+      "thresholdType": "Date",
+      "customMessage": "End date should not be less than start date."
+    }
+  ],
+  "queryStrings": [
+    {
+      "acceptName": "loanAmount",
+      "postName": "loanAmount",
+      "isQuestion": "true"
+    },
+    {
+      "acceptName": "loanPurpose",
+      "postName": "loanPurpose",
+      "isQuestion": "true"
+    },
+    {
+      "acceptName": "partnerid",
+      "postName": "partnerid",
+      "isQuestion": "false"
+    },
+    { "acceptName": "gclid", "postName": "gclid", "isQuestion": "false" },
+    { "acceptName": "featured", "postName": "featured", "isQuestion": "false" },
+    {
+      "acceptName": "programid",
+      "postName": "programid",
+      "isQuestion": "false"
+    },
+    {
+      "acceptName": "affiliateid",
+      "postName": "affiliateid",
+      "isQuestion": "false"
+    },
+    {
+      "acceptName": "affiliatesubid",
+      "postName": "affiliatesubid",
+      "isQuestion": "false"
+    },
+    {
+      "acceptName": "campaignid",
+      "postName": "campaignid",
+      "isQuestion": "false"
+    },
+    {
+      "acceptName": "utm_source",
+      "postName": "utmSource",
+      "isQuestion": "false"
+    },
+    {
+      "acceptName": "utm_medium",
+      "postName": "utmMedium",
+      "isQuestion": "false"
+    },
+    { "acceptName": "utm_term", "postName": "utmTerm", "isQuestion": "false" },
+    {
+      "acceptName": "utm_campaign",
+      "postName": "utmCampaign",
+      "isQuestion": "false"
+    },
+    {
+      "acceptName": "utm_content",
+      "postName": "utmContent",
+      "isQuestion": "false"
+    },
+    { "acceptName": "dealerid", "postName": "dealerid", "isQuestion": "false" },
+    {
+      "acceptName": "dealerEmail",
+      "postName": "dealerEmail",
+      "isQuestion": "false"
+    },
+    {
+      "acceptName": "firstname",
+      "postName": "firstname",
+      "isQuestion": "true"
+    },
+    { "acceptName": "lastname", "postName": "lastname", "isQuestion": "true" },
+    { "acceptName": "email", "postName": "email", "isQuestion": "true" },
+    {
+      "acceptName": "subPurpose",
+      "postName": "subPurpose",
+      "isQuestion": "true"
+    },
+    {
+      "acceptName": "physicianEmail",
+      "postName": "physicianEmail",
+      "isQuestion": "false"
+    },
+    { "acceptName": "v", "postName": "v", "isQuestion": "false" },
+    {
+      "acceptName": "applicationId",
+      "postName": "applicationId",
+      "isQuestion": "true"
+    },
+    {
+      "acceptName": "applicationID",
+      "postName": "applicationID",
+      "isQuestion": "false"
+    },
+    {
+      "acceptName": "coBorrowerRequired",
+      "postName": "coBorrowerRequired",
+      "isQuestion": "true"
+    },
+    {
+      "acceptName": "loanTerm",
+      "postName": "desiredTerm",
+      "isQuestion": "true"
+    },
+    {
+      "acceptName": "accountNumber",
+      "postName": "accountNumber",
+      "isQuestion": "false"
+    }
+  ],
+  "conditionalrules": [
+    {
+      "ruleson": "onContinue",
+      "field": "employerDetails",
+      "compareField": "employmentStatus",
+      "source": "postData-borrower",
+      "type": "question",
+      "operator": "==",
+      "threshhold": "FULL_TIME,PART_TIME",
+      "thresholdType": "Value",
+      "customMessage": "",
+      "actionType": "css",
+      "action": "display-none"
+    }
+  ],
+  "defaultState": [
+    { "name": "borrowerNode", "value": "", "dataType": "array" },
+    { "name": "employmentNode", "value": "", "dataType": "array" },
+    { "name": "Pages", "value": "", "dataType": "array" },
+    { "name": "currentPageName", "value": "", "dataType": "string" },
+    { "name": "ipAddress", "value": "", "dataType": "string" },
+    { "name": "mpUniqueClickID", "value": "", "dataType": "string" },
+    { "name": "IsContinue", "value": "false", "dataType": "bool" },
+    { "name": "buttonText", "value": "Continue", "dataType": "string" },
+    { "name": "currentPage", "value": "1", "dataType": "number" },
+    { "name": "IsFormSubmitted", "value": "false", "dataType": "bool" },
+    { "name": "ShowConsent", "value": "false", "dataType": "bool" },
+    {
+      "name": "bifurcatedPageArray",
+      "value": "false",
+      "dataType": "initialArray"
+    },
+    { "name": "initialDisabled", "value": "false", "dataType": "bool" },
+    { "name": "AgreePqTermsValue", "value": "true", "dataType": "bool" },
+    { "name": "AgreeTCPAValue", "value": "false", "dataType": "bool" },
+    { "name": "showModal", "value": "false", "dataType": "bool" },
+    { "name": "showFundingModal", "value": "false", "dataType": "bool" },
+    { "name": "loaderContent", "value": "", "dataType": "string" },
+    { "name": "InCompleteEmailSent", "value": "false", "dataType": "bool" },
+    { "name": "showLenderImage", "value": "", "dataType": "string" },
+    { "name": "zipCodeArray", "value": "", "dataType": "array" },
+    { "name": "cityCodeArray", "value": "", "dataType": "array" },
+    { "name": "stateCodeArray", "value": "", "dataType": "array" },
+    { "name": "URLPrefix", "value": "", "dataType": "string" },
+    { "name": "TransactionTypeValue", "value": "", "dataType": "string" },
+    { "name": "FormSubmissionCount", "value": "", "dataType": "string" },
+    {
+      "name": "ProductTypeValue",
+      "value": "formSettings.productType",
+      "dataType": "configSetting"
+    },
+    {
+      "name": "BrandNameValue",
+      "value": "formSettings.brandName",
+      "dataType": "configSetting"
+    },
+    { "name": "errorCountList", "value": "", "dataType": "array" }
+  ],
+  "requestNode": [
+    {
+      "name": "transactionType",
+      "value": "TransactionType",
+      "valueType": "state"
+    },
+    { "name": "currentTime", "value": "CurrentTime", "valueType": "state" },
+    { "name": "gclid", "value": "gclid", "valueType": "props-qs" },
+    {
+      "name": "loanAmount",
+      "value": "LoanAmount",
+      "valueType": "state",
+      "isPlain": "true"
+    },
+    { "name": "loanPurpose", "value": "LoanPurpose", "valueType": "state" },
+    { "name": "emailAddress", "value": "EmailAddress", "valueType": "state" },
+    { "name": "partnerId", "value": "PartnerId", "valueType": "props-qs" },
+    { "name": "uuid", "value": "uuid", "valueType": "window" },
+    { "name": "programId", "value": "programid", "valueType": "props-qs" },
+    { "name": "featured", "value": "Featured", "valueType": "props-qs" },
+    { "name": "affiliateId", "value": "affiliateid", "valueType": "props-qs" },
+    { "name": "deviceType", "value": "currentDevice", "valueType": "props" },
+    { "name": "browser", "value": "currentBrowser", "valueType": "props" },
+    { "name": "os", "value": "currentOS", "valueType": "props" },
+    { "name": "applicationId", "value": "ApplicationId", "valueType": "state" },
+    {
+      "name": "ipAddress",
+      "value": "IPAddress",
+      "valueType": "state",
+      "isIp": "true"
+    },
+    { "name": "senderDomain", "value": "SenderDomain", "valueType": "props" },
+    {
+      "name": "bankRoutingNumber",
+      "value": "BankRoutingNumber",
+      "valueType": "state"
+    },
+    {
+      "name": "bankAccountNumber",
+      "value": "BankAccountNumber",
+      "valueType": "state"
+    },
+    {
+      "name": "identification",
+      "value": "Identification",
+      "valueType": "state"
+    },
+    { "name": "reusableOffer", "value": "ReusableOffer", "valueType": "state" },
+    { "name": "lenderId", "value": "LenderId", "valueType": "state" },
+    { "name": "offerDate", "value": "OfferDate", "valueType": "state" },
+    { "name": "campaignId", "value": "campaignid", "valueType": "props-qs" },
+    {
+      "name": "coBorrowerRequired",
+      "value": "CoBorrowerRequired",
+      "valueType": "state"
+    },
+    {
+      "name": "applicationUuid",
+      "value": "ApplicationUuid",
+      "valueType": "state"
+    },
+    { "name": "hSessionId", "value": "HSessionId", "valueType": "window" },
+    { "name": "prsessionid", "value": "prSessionid", "valueType": "window" },
+    { "name": "mpUniqueClickID", "value": "prClid", "valueType": "state" },
+    { "name": "borrowers", "value": "borrowerNode", "valueType": "configNode" },
+    {
+      "name": "formSubmissionCount",
+      "value": "formSubmissionCount",
+      "valueType": "state"
+    },
+    {
+      "name": "accountNumber",
+      "value": "accountNumber",
+      "valueType": "props-qs"
+    },
+    { "name": "loanTerm", "value": "DesiredTerm", "valueType": "state" },
+    { "name": "productType", "value": "ProductType", "valueType": "state" },
+    { "name": "brandName", "value": "BrandName", "valueType": "state" },
+    {
+      "name": "pinWheelStatus",
+      "value": "PinWheelStatus",
+      "valueType": "state"
+    },
+    { "name": "plaidStatus", "value": "PlaidStatus", "valueType": "state" }
+  ],
+  "borrowerNode": [
+    { "name": "address1", "value": "Address1", "valueType": "state" },
+    { "name": "address2", "value": "Address2", "valueType": "state" },
+    { "name": "city", "value": "City", "valueType": "state" },
+    { "name": "state", "value": "State", "valueType": "state" },
+    { "name": "zipCode", "value": "ZipCode", "valueType": "state" },
+    { "name": "housingStatus", "value": "HousingStatus", "valueType": "state" },
+    {
+      "name": "housingPayment",
+      "value": "HousingPayment",
+      "valueType": "state",
+      "isPlain": "true"
+    },
+    {
+      "name": "dateOfBirth",
+      "value": "DateOfBirth",
+      "valueType": "state",
+      "currentFormat": "DD/MM/YYYY",
+      "newFormat": "YYYY-MM-DD"
+    },
+    {
+      "name": "employmentStatus",
+      "value": "EmploymentStatus",
+      "valueType": "state"
+    },
+    {
+      "name": "annualIncome",
+      "value": "AnnualIncome",
+      "valueType": "state",
+      "isPlain": "true"
+    },
+    { "name": "firstName", "value": "FirstName", "valueType": "state" },
+    { "name": "lastName", "value": "LastName", "valueType": "state" },
+    {
+      "name": "primaryPhoneNumber",
+      "value": "PrimaryPhoneNumber",
+      "valueType": "state",
+      "isPlain": "true"
+    },
+    { "name": "emailAddress", "value": "EmailAddress", "valueType": "state" },
+    { "name": "ssn", "value": "SSN", "valueType": "state", "isPlain": "true" },
+    { "name": "agreePqTerms", "value": "AgreePqTerms", "valueType": "state" },
+    { "name": "agreeTCPA", "value": "AgreeTCPA", "valueType": "state" },
+    {
+      "name": "secondaryPhoneNumber",
+      "value": "SecondaryPhoneNumber",
+      "valueType": "state",
+      "isPlain": "true"
+    },
+    {
+      "name": "primaryBorrower",
+      "value": "PrimaryBorrower",
+      "valueType": "state"
+    },
+    { "name": "military", "value": "Military", "valueType": "state" },
+    { "name": "citizenship", "value": "Citizenship", "valueType": "state" },
+    { "name": "location", "value": "Location", "valueType": "state" },
+    { "name": "education", "value": "Education", "valueType": "state" },
+    {
+      "name": "employmentInformation",
+      "value": "employmentNode",
+      "valueType": "configNode"
+    }
+  ],
+  "employmentNode": [
+    { "name": "employerName", "value": "EmployerName", "valueType": "state" },
+    {
+      "name": "employerPhoneNumber",
+      "value": "EmployerPhoneNumber",
+      "valueType": "state",
+      "isPlain": "true"
+    }
+  ],
+  "questions": [
+    {
+      "id": 40,
+      "name": "summarypage",
+      "type": "summary",
+      "title": "",
+      "col": 12,
+      "submitForm": true,
+      "formPostURL": "/personal-loan/document-upload/",
+      "transactionType": "DocUpload",
+      "showActionButton": "no",
+      "extendWidth": true,
+      "buttonText": "Submit Application",
+      "formSubmissionCount": 2
+    },
+    {
+      "id": 1,
+      "name": "loanPurpose",
+      "type": "dropdown",
+      "title": "What is the purpose of the loan?",
+      "placeholder": "Select a loan purpose",
+      "errormessage": "Please make a selection",
+      "required": "Please make a selection",
+      "showTitle": true,
+      "listItem": "loanPurposeList",
+      "focus": true,
+      "validationRules": {
+        "required": true
+      },
+      "value": "",
+      "stateName": "LoanPurpose",
+      "queryString": {
+        "accept": true,
+        "postName": "loanPurpose",
+        "skip": true
+      },
+      "postData": "loanPurpose",
+      "listName": "loanPurposeList",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 ",
+      "summarySection": "LoanInformation",
+      "summaryInfo": {
+        "title": "Loan Purpose:",
+        "controlType": "dropdown",
+        "editable": false,
+        "postData": "borrowers[0].offerData.loanPurpose",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 2,
+      "name": "loanAmount",
+      "type": "text",
+      "title": "How much do you wish to borrow?",
+      "placeholder": "$0",
+      "errormessage": "Loan Amount must be between $500 and $10,000",
+      "backBtn": true,
+      "backbutton": true,
+      "required": "Please enter loan amount",
+      "custommessage": "Loan Amount must be between $500 and $10,000",
+      "showTitle": true,
+      "focus": true,
+      "label": "Loan Amount",
+      "stateName": "LoanAmount",
+      "queryString": { "accept": true, "postName": "loanAmount", "skip": true },
+      "validationRules": {
+        "required": true
+      },
+      "customValidation": {
+        "min-max": "500-10000"
+      },
+      "value": "",
+      "maxLength": "11",
+      "errorCode": "MinError",
+      "isNumber": true,
+      "postData": "loanAmount",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 ",
+      "inputType": "tel",
+      "summarySection": "LoanInformation",
+      "summaryInfo": {
+        "title": "Loan Amount:",
+        "controlType": "text",
+        "editable": false,
+        "postData": "borrowers[0].offerData.loanAmount",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 51,
+      "name": "address1",
+      "type": "text",
+      "backBtn": true,
+      "title": "Your Primary Address",
+      "placeholder": "Street address",
+      "errormessage": "Invalid Street Address",
+      "required": "Please enter Street Address",
+      "showTitle": false,
+      "focus": true,
+      "stateName": "Address1",
+      "queryString": { "accept": false, "postName": "address1", "skip": false },
+      "validationRules": {
+        "required": true
+      },
+      "value": "",
+      "POBoxMessage": "Invalid Address",
+      "customValidation": {
+        "maxcharacter": 100,
+        "externalValidation": {
+          "method": "validateCityStateZipAjax",
+          "apiURL": "https://maps.googleapis.com/maps/api/geocode/json?address=",
+          "apikey": "AIzaSyANpZbWlnVftI-HYTH8YdmqDBbjIvUndOs",
+          "isvalueonly": true,
+          "payloadkey": {
+            "Address": { "name": "Address1", "type": "textbox" },
+            "City": { "name": "City", "type": "textbox" },
+            "State": { "name": "State", "type": "dropdown" },
+            "ZipCode": { "name": "ZipCode", "type": "dropdown" }
+          }
+        }
+      },
+      "autoComplete": true,
+      "titleClass": "col-sm-12",
+      "prequalifyButtonClass": " center-align ",
+      "postData": "address1",
+      "extendWidth": true,
+      "columnStyle": "text-control-align new-height updated-margin col-sm-6 col-xs-12",
+      "isAddressGroup": true,
+      "summarySection": "PrimaryBorrower",
+      "summaryInfo": {
+        "title": "Address1:",
+        "controlType": "text",
+        "editable": true,
+        "postData": "borrowers[0].address1",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "parentId": 51,
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 52,
+      "name": "address2",
+      "type": "text",
+      "title": "Apartment",
+      "placeholder": "Apt, Suite, Bldg. (Optional)",
+      "errormessage": "Only 20 characters is allowed.",
+      "required": "",
+      "showTitle": false,
+      "focus": false,
+      "stateName": "Address2",
+      "queryString": { "accept": false, "postName": "address2", "skip": false },
+      "value": "",
+      "postData": "address2",
+      "extendWidth": true,
+      "columnStyle": "text-control-align new-height updated-margin col-sm-6 col-xs-12",
+      "isAddressGroup": true,
+      "summarySection": "PrimaryBorrower",
+      "summaryInfo": {
+        "title": "Address2:",
+        "controlType": "text",
+        "editable": true,
+        "postData": "borrowers[0].address2",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "parentId": 51,
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 53,
+      "name": "city",
+      "type": "text",
+      "title": "City",
+      "placeholder": "City",
+      "errormessage": "Invalid city for selected state",
+      "required": "Please enter City",
+      "showTitle": false,
+      "focus": false,
+      "stateName": "City",
+      "queryString": { "accept": false, "postName": "city", "skip": false },
+      "validationRules": {
+        "required": true
+      },
+      "customValidation": {
+        "externalValidation": {
+          "method": "validateCityStateZipAjax",
+          "apiURL": "https://maps.googleapis.com/maps/api/geocode/json?address=",
+          "apikey": "AIzaSyANpZbWlnVftI-HYTH8YdmqDBbjIvUndOs",
+          "isvalueonly": true,
+          "payloadkey": {
+            "Address": { "name": "Address1", "type": "textbox" },
+            "City": { "name": "City", "type": "textbox" },
+            "State": { "name": "State", "type": "dropdown" },
+            "ZipCode": { "name": "ZipCode", "type": "dropdown" }
+          }
+        }
+      },
+      "value": "",
+      "postData": "city",
+      "columnStyle": "text-control-align new-height  col-sm-4 col-xs-12  ",
+      "isAddressGroup": true,
+      "summarySection": "PrimaryBorrower",
+      "summaryInfo": {
+        "title": "City:",
+        "controlType": "text",
+        "editable": true,
+        "postData": "borrowers[0].city",
+        "columnStyle": "text-control-align col-sm-4 col-xs-12 ",
+        "parentId": 51,
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 54,
+      "name": "state",
+      "type": "dropdown",
+      "title": "",
+      "placeholder": "State",
+      "errormessage": "We are currently unable to lend in your state.",
+      "required": "Please make a selection",
+      "showTitle": false,
+      "listItem": "stateList",
+      "focus": false,
+      "stateName": "State",
+      "queryString": { "accept": false, "postName": "state", "skip": false },
+      "validationRules": {
+        "required": true
+      },
+
+      "customValidation": {
+        "externalValidation": {
+          "method": "validateCityStateZipAjax",
+          "apiURL": "https://maps.googleapis.com/maps/api/geocode/json?address=",
+          "apikey": "AIzaSyANpZbWlnVftI-HYTH8YdmqDBbjIvUndOs",
+          "isvalueonly": true,
+          "payloadkey": {
+            "Address": { "name": "Address1", "type": "textbox" },
+            "City": { "name": "City", "type": "textbox" },
+            "State": { "name": "State", "type": "dropdown" },
+            "ZipCode": { "name": "ZipCode", "type": "dropdown" }
+          }
+        },
+        "allowedState": [
+          "Illinois",
+          "Missouri",
+          "Utah",
+          "Oregon",
+          "Idaho",
+          "New Hampshire",
+          "Kansas"
+        ]
+      },
+      "value": "",
+      "postData": "borrowers[0].state",
+      "listName": "stateList",
+      "columnStyle": "text-control-align col-sm-4 col-xs-12 ",
+      "isAddressGroup": true,
+      "summarySection": "PrimaryBorrower",
+      "summaryInfo": {
+        "title": "Estado:",
+        "controlType": "dropdown",
+        "editable": true,
+        "postData": "borrowers[0].state",
+        "columnStyle": "text-control-align col-sm-4 col-xs-12 ",
+        "parentId": 51,
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 55,
+      "name": "zipCode",
+      "type": "text",
+      "title": "What is your zip code?",
+      "placeholder": "ZipCode",
+      "errormessage": "Please enter valid  zip code",
+      "required": "Please enter Zip Code",
+      "showTitle": false,
+      "focus": false,
+      "inputType": "tel",
+      "stateName": "ZipCode",
+      "queryString": { "accept": false, "postName": "zipCode", "skip": false },
+      "state": "ZipCode",
+      "validationRules": {
+        "required": true
+      },
+
+      "customValidation": {
+        "externalValidation": {
+          "method": "validateCityStateZipAjax",
+          "apiURL": "https://maps.googleapis.com/maps/api/geocode/json?address=",
+          "apikey": "AIzaSyANpZbWlnVftI-HYTH8YdmqDBbjIvUndOs",
+          "isvalueonly": true,
+          "payloadkey": {
+            "Address": { "name": "Address1", "type": "textbox" },
+            "City": { "name": "City", "type": "textbox" },
+            "State": { "name": "State", "type": "dropdown" },
+            "ZipCode": { "name": "ZipCode", "type": "dropdown" }
+          }
+        },
+        "disableSpecilaCharacter": {
+          "rules": "[!@#$%^&*]",
+          "label": "Special character not allowed"
+        },
+        "minmaxcharacter": "5-5",
+        "number": { "rules": "^[0-9]*$", "label": "Number allowed" }
+      },
+      "value": "",
+      "postData": "zipCode",
+      "columnStyle": "text-control-align new-height  col-sm-4 col-xs-12  ",
+      "isAddressGroup": true,
+      "summarySection": "PrimaryBorrower",
+      "summaryInfo": {
+        "title": "Zip Code:",
+        "controlType": "text",
+        "editable": true,
+        "postData": "borrowers[0].zipCode",
+        "columnStyle": "text-control-align col-sm-4 col-xs-12 ",
+        "parentId": 51,
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 3,
+      "name": "address",
+      "backBtn": true,
+      "type": "group",
+      "subquestions": [51, 52, 53, 54, 55]
+    },
+    {
+      "id": 4,
+      "name": "housingStatus",
+      "type": "button",
+      "backBtn": true,
+      "title": "What is your housing status?",
+      "placeholder": "Housing",
+      "errormessage": "",
+      "required": "Please make a selection",
+      "showTitle": true,
+      "listItem": "housingList",
+      "focus": true,
+      "stateName": "HousingStatus",
+      "queryString": {
+        "accept": false,
+        "postName": "housingStatus",
+        "skip": false
+      },
+      "validationRules": {
+        "required": true
+      },
+      "nextpage": {
+        "Default": "housingPayment",
+        "RENT": "housingPayment",
+        "OWN_WITH_MORTGAGE": "housingPayment",
+        "OWN_NO_MORTGAGE": "dateOfBirth",
+        "LIVING_RENT_FREE": "dateOfBirth"
+      },
+      "value": "",
+      "postData": "borrowers[0].housingStatus",
+      "listName": "housingList",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 ",
+      "summarySection": "PrimaryBorrower",
+      "summaryInfo": {
+        "title": "Housing Status:",
+        "controlType": "dropdown",
+        "editable": true,
+        "postData": "borrowers[0].housingStatus",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero",
+        "disableDependentFields": [
+          {
+            "selectedValue": "creditScore",
+            "disabled": true,
+            "disableName": "housingPayment",
+            "defaultValue": "",
+            "stateName": "HousingPayment"
+          },
+          {
+            "selectedValue": "housingPayment",
+            "disabled": false,
+            "disableName": "housingPayment"
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "name": "housingPayment",
+      "type": "text",
+      "backBtn": true,
+      "title": "What is your monthly rent / mortgage / board payment?",
+      "placeholder": "$0",
+      "errormessage": "Please enter an amount between $500-$10,000",
+      "errormessagecode": "Please enter valid Monthly rent / Mortgage payment",
+      "required": "Please enter Monthly rent / Mortgage payment",
+      "showTitle": true,
+      "focus": false,
+      "stateName": "HousingPayment",
+      "queryString": {
+        "accept": false,
+        "postName": "housingPayment",
+        "skip": false
+      },
+      "validationRules": {
+        "required": true
+      },
+      "customValidation": {
+        "min-max": "500-10000"
+      },
+      "value": "",
+      "errorCode": "CodeError",
+      "isNumber": true,
+      "postData": "housingPayment",
+      "defaultValue": "0",
+      "maxLength": "8",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 ",
+      "inputType": "tel",
+      "summarySection": "PrimaryBorrower",
+      "summaryInfo": {
+        "title": "Housing Payment:",
+        "controlType": "text",
+        "editable": true,
+        "postData": "borrowers[0].housingPayment",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 6,
+      "name": "creditScore",
+      "type": "fa-button",
+      "title": "What is your estimated credit score?",
+      "placeholder": "Estimated credit score",
+      "errormessage": "",
+      "required": "Please make a selection",
+      "showTitle": true,
+      "listItem": "estimatedCreditScoreList",
+      "focus": true,
+      "stateName": "CreditScore",
+      "queryString": {
+        "accept": false,
+        "postName": "creditScore",
+        "skip": false
+      },
+      "validationRules": {
+        "required": true
+      },
+      "value": "",
+      "postData": "borrowers[0].creditScore",
+      "listName": "estimatedCreditScoreList",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 ",
+      "extendWidth": true,
+      "summarySection": "PrimaryBorrower",
+      "summaryInfo": {
+        "title": "Credit Score:",
+        "controlType": "dropdown",
+        "editable": false,
+        "postData": "borrowers[0].creditScore",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 7,
+      "name": "dateOfBirth",
+      "type": "masked-text",
+      "backBtn": true,
+      "title": "What is your Date of Birth?",
+      "placeholder": "MM/DD/YYYY",
+      "pattern": "date",
+      "errormessage": "You must be at least 18 years old to apply.",
+      "required": "Please enter Birth date",
+      "showTitle": true,
+      "focus": true,
+      "stateName": "DateOfBirth",
+      "queryString": {
+        "accept": false,
+        "postName": "dateOfBirth",
+        "skip": false
+      },
+      "label": "BirthDate",
+      "customMessage": "Birth Date is not valid",
+      "validationRules": {
+        "required": true
+      },
+      "customValidation": {
+        "minAge-maxAge": {
+          "min": "18",
+          "max": "100",
+          "rules": "^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2})*$"
+        }
+      },
+      "value": "",
+      "postData": "dateOfBirth",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 ",
+      "summarySection": "PrimaryBorrower",
+      "summaryInfo": {
+        "title": "Date Of Birth:",
+        "controlType": "masked-text",
+        "editable": true,
+        "postData": "borrowers[0].dateOfBirth",
+        "postDataPattern": "YYYY-MM-DD",
+        "valuePattern": "MM/DD/YYYY",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 8,
+      "name": "employmentStatus",
+      "type": "button",
+      "backBtn": true,
+      "title": "What is your employment status?",
+      "placeholder": "Employment",
+      "errormessage": "",
+      "required": "Please make a selection",
+      "showTitle": true,
+      "listItem": "employmentList",
+      "focus": true,
+      "stateName": "EmploymentStatus",
+      "queryString": {
+        "accept": false,
+        "postName": "employmentStatus",
+        "skip": false
+      },
+      "validationRules": {
+        "required": true
+      },
+      "value": "",
+      "postData": "borrowers[0].employmentStatus",
+      "listName": "employmentList",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 ",
+      "summarySection": "EmploymentInformation",
+      "summaryInfo": {
+        "title": "Employment Status:",
+        "controlType": "dropdown",
+        "editable": true,
+        "postData": "borrowers[0].employmentStatus",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 9,
+      "name": "annualIncome",
+      "type": "text",
+      "backBtn": true,
+      "title": "What's your total annual income, before taxes?",
+      "placeholder": "$0",
+      "errormessage": "",
+      "includeNote": true,
+      "note": "We may need to confirm this later so try to be as accurate as possible.",
+      "errormessagecode": "Insufficient Annual Income",
+      "custommessage": "Net Annual Income between $7,200 and $10,000,000",
+      "required": "Please enter Annual Income",
+      "showTitle": true,
+      "focus": false,
+      "stateName": "AnnualIncome",
+      "queryString": {
+        "accept": false,
+        "postName": "annualIncome",
+        "skip": false
+      },
+      "validationRules": {
+        "required": true
+      },
+      "value": "",
+      "errorCode": "MinError",
+      "isNumber": true,
+      "postData": "annualIncome",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 ",
+      "inputType": "tel",
+      "showToolTip": true,
+      "tooltipText": "<p class='annual1'>This is your gross income (before tax) from all sources including income from your employment, self-employment, retirement pay, or other government benefits. Alimony, child support, or separate maintenance income is optional to include.</p>",
+      "tooltipcssclass": "tooltiptext tooltip-top-margin-anualincome",
+      "summarySection": "PrimaryBorrower",
+      "summaryInfo": {
+        "title": "Annual Income:",
+        "controlType": "text",
+        "editable": true,
+        "postData": "borrowers[0].annualIncome",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 11012,
+      "backBtn": true,
+      "name": "YourName",
+      "extendWidth": true,
+      "type": "label",
+      "title": "Your Name"
+    },
+    {
+      "id": 56,
+      "name": "firstName",
+      "type": "text",
+      "backBtn": true,
+      "title": "",
+      "placeholder": "First Name",
+      "errormessage": "Invalid First Name",
+      "required": "Please enter your first name",
+      "showTitle": false,
+      "focus": false,
+      "stateName": "FirstName",
+      "queryString": {
+        "accept": false,
+        "postName": "firstName",
+        "skip": false
+      },
+      "validationRules": {
+        "required": true
+      },
+      "customValidation": {
+        "disableSpecilaCharacter": {
+          "rules": "[0-9+!@#$%^&*]",
+          "label": "Special character not allowed"
+        }
+      },
+      "value": "",
+      "max": "50",
+      "titleClass": "col-sm-12 col-xs-12 your-name",
+      "prequalifyButtonClass": " center-align ",
+      "postData": "firstName",
+      "extendWidth": true,
+      "columnStyle": "text-control-align new-height updated-margin col-sm-6 col-xs-12 your-name",
+      "summarySection": "PrimaryBorrower",
+      "summaryInfo": {
+        "title": "First Name:",
+        "controlType": "text",
+        "editable": true,
+        "postData": "borrowers[0].firstName",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 57,
+      "name": "lastName",
+      "type": "text",
+      "title": "",
+      "placeholder": "Last Name",
+      "errormessage": "Invalid Last Name",
+      "required": "Please enter your last name",
+      "showTitle": false,
+      "focus": false,
+      "stateName": "LastName",
+      "queryString": { "accept": false, "postName": "lastName", "skip": false },
+      "validationRules": {
+        "required": true
+      },
+      "customValidation": {
+        "disableSpecilaCharacter": {
+          "rules": "[0-9+!@#$%^&*]",
+          "label": "Special character not allowed"
+        }
+      },
+      "value": "",
+      "max": "50",
+      "postData": "lastName",
+      "extendWidth": true,
+      "columnStyle": "text-control-align new-height updated-margin col-sm-6 col-xs-12",
+      "summarySection": "PrimaryBorrower",
+      "summaryInfo": {
+        "title": "Last Name:",
+        "controlType": "text",
+        "editable": true,
+        "postData": "borrowers[0].lastName",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 10,
+      "name": "name",
+      "backBtn": true,
+      "type": "group",
+      "subquestions": [11012, 56, 57]
+    },
+    {
+      "id": 11,
+      "name": "primaryPhoneNumber",
+      "type": "masked-text",
+      "backBtn": true,
+      "title": "Primary Phone Number",
+      "placeholder": "(xxx) xxx-xxxx",
+      "pattern": "phone",
+      "errormessage": "Invalid Primary Phone Number",
+      "required": "Please enter Primary Phone Number",
+      "showTitle": true,
+      "focus": true,
+      "col": 6,
+      "stateName": "PrimaryPhoneNumber",
+      "queryString": {
+        "accept": false,
+        "postName": "primaryPhoneNumber",
+        "skip": false
+      },
+      "validationRules": {
+        "required": true
+      },
+      "customValidation": {
+        "phonenumber": {
+          "value": "1",
+          "rules": "\\(?\\d{3}\\)?-? *\\d{3}-? *-?\\d{4}"
+        },
+        "externalValidation": {
+          "method": "commonValidateAPIAJAX",
+          "apiURL": "https://apilayer.net/api/validate?",
+          "apikey": "access_key=86c97b1559bd320f30967010f3150b2b",
+          "isvalueonly": false,
+          "isequalsign": false,
+          "payloadkey": {
+            "number=1": { "name": "PrimaryPhoneNumber", "type": "textbox" }
+          }
+        }
+      },
+
+      "value": "",
+      "errorCode": "CodeError",
+      "postData": "phonenumber",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 ",
+      "inputType": "tel",
+      "summarySection": "PrimaryBorrower",
+      "summaryInfo": {
+        "title": "Phone Number:",
+        "controlType": "masked-text",
+        "editable": true,
+        "postData": "borrowers[0].primaryPhoneNumber",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 12,
+      "name": "emailAddress",
+      "type": "text",
+      "backBtn": true,
+      "title": "Email Address",
+      "placeholder": "Email Address",
+      "errormessage": "Please enter a valid email address",
+      "required": "Please enter a valid email address",
+      "showTitle": true,
+      "focus": true,
+      "stateName": "EmailAddress",
+      "queryString": {
+        "accept": false,
+        "postName": "emailAddress",
+        "skip": false
+      },
+      "validationRules": {
+        "required": true,
+        "isEmail": true
+      },
+      "customValidation": {
+        "EmailAddress": {
+          "value": "1",
+          "rules": "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        }
+      },
+      "value": "",
+      "inputType": "email",
+      "showToolTip": true,
+      "tooltipText": "We use email to alert you if there's a problem during the pre-qualification process and about important account information",
+      "tooltipcssclass": "tooltiptext tooltip-top-margin-email",
+      "postData": "emailAddress",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 ",
+      "summarySection": "PrimaryBorrower",
+      "summaryInfo": {
+        "title": "Email Address:",
+        "controlType": "text",
+        "editable": true,
+        "postData": "borrowers[0].emailAddress",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 58,
+      "name": "SSN",
+      "type": "masked-text",
+      "backBtn": true,
+      "title": "Please enter your SSN",
+      "placeholder": "xxx-xx-xxxx",
+      "pattern": "ssn",
+      "errormessage": "Invalid SSN",
+      "required": "Please enter a valid SSN",
+      "showTitle": false,
+      "extendWidth": true,
+      "titleClass": "col-sm-12 col-xs-12",
+      "focus": true,
+      "showConsent": true,
+      "stateName": "SSN",
+      "queryString": { "accept": false, "postName": "SSN", "skip": false },
+      "validationRules": {
+        "required": true
+      },
+      "customValidation": {
+        "SSN": {
+          "rules": "\\(?\\d{3}\\)?-? *\\d{2}-? *-?\\d{4}"
+        }
+      },
+      "value": "",
+      "submitForm": true,
+      "formPostURL": "/personal-loan/offers",
+      "transactionType": "PreQual",
+      "buttonText": "View Pre-Qualified Offers",
+      "postData": "ssn",
+      "minLength": "9",
+      "maxLength": "9",
+      "defaultChecked": false,
+      "columnStyle": "text-control-align col-sm-6 col-xs-12 margin25percent",
+      "inputType": "tel",
+      "formSubmissionCount": 1,
+      "isPassword": true,
+      "summarySection": "PrimaryBorrower",
+      "summaryInfo": {
+        "title": "Social Security Number:",
+        "controlType": "masked-text",
+        "editable": true,
+        "postData": "borrowers[0].ssn",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 59,
+      "name": "agreePqTerms",
+      "type": "checkBox",
+      "showCheckbox": true,
+      "focus": true,
+      "defaultChecked": false,
+      "stateName": "AgreePqTerms",
+      "queryString": {
+        "accept": false,
+        "postName": "agreePqTerms",
+        "skip": false
+      },
+      "validationRules": {
+        "required": true
+      },
+      "postData": "borrowers[0].agreePqTerms",
+      "value": "",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 "
+    },
+    {
+      "id": 60,
+      "name": "agreeTCPA",
+      "type": "checkBox",
+      "showCheckbox": true,
+      "focus": true,
+      "defaultChecked": false,
+      "stateName": "AgreeTCPA",
+      "queryString": {
+        "accept": false,
+        "postName": "agreeTCPA",
+        "skip": false
+      },
+      "validationRules": {
+        "required": false
+      },
+      "postData": "agreeTCPA",
+      "value": "",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 "
+    },
+    {
+      "id": 13,
+      "name": "agreeTerms",
+      "type": "group",
+      "subquestions": [58, 59, 60]
+    },
+    {
+      "id": 14,
+      "name": "secondaryPhoneNumber",
+      "type": "masked-text",
+      "title": "numero de telefono secundario",
+      "placeholder": "(xxx) xxx-xxxx",
+      "pattern": "phone",
+      "errormessage": "Número de teléfono secundario no válido",
+      "showTitle": true,
+      "focus": true,
+      "col": 6,
+      "stateName": "SecondaryPhoneNumber",
+      "queryString": {
+        "accept": false,
+        "postName": "secondaryPhoneNumber",
+        "skip": false
+      },
+      "validationRules": {
+        "required": true
+      },
+      "value": "",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 "
+    },
+    {
+      "id": 14,
+      "name": "secondaryPhoneNumber",
+      "type": "masked-text",
+      "title": "Secondary Phone Number",
+      "placeholder": "(xxx) xxx-xxxx",
+      "pattern": "phone",
+      "errormessage": "Invalid Secondary Phone Number",
+      "showTitle": true,
+      "focus": true,
+      "col": 6,
+      "stateName": "SecondaryPhoneNumber",
+      "queryString": {
+        "accept": false,
+        "postName": "secondaryPhoneNumber",
+        "skip": false
+      },
+      "validationRules": {
+        "required": true
+      },
+      "value": "",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 "
+    },
+    {
+      "id": 11013,
+      "backBtn": true,
+      "name": "YourName",
+      "extendWidth": true,
+      "type": "label",
+      "title": "Please enter your most current employment information"
+    },
+    {
+      "id": 31,
+      "name": "employerName",
+      "type": "text",
+      "title": "Please enter your most current employment information",
+      "placeholder": "Company Name",
+      "errormessage": "Invalid Company Name",
+      "required": "Please Enter Company Name",
+      "showTitle": true,
+      "hideSummary": true,
+      "focus": false,
+      "col": 6,
+      "stateName": "EmployerName",
+      "queryString": {
+        "accept": false,
+        "postName": "employerName",
+        "skip": false
+      },
+      "validationRules": {
+        "required": true
+      },
+      "value": "",
+      "max": "50",
+      "extendWidth": true,
+      "titleClass": "col-sm-12 col-xs-12",
+      "columnStyle": "text-control-align col-sm-6 col-xs-12 clear-both",
+      "isEmploymentInformation": true,
+      "employmentInformationLevel": 0,
+      "summarySection": "EmploymentInformation",
+      "summaryInfo": {
+        "title": "Employer Name:",
+        "controlType": "text",
+        "editable": true,
+        "postData": "EmployerName",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "prefix": "",
+        "suffix": "",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 66,
+      "name": "employerPhoneNumber",
+      "type": "masked-text",
+      "title": "",
+      "placeholder": "Office Number",
+      "pattern": "phone",
+      "errormessage": "Invalid Office Number.",
+      "required": "Please Enter Office Number",
+      "showTitle": false,
+      "focus": false,
+      "hideSummary": true,
+      "stateName": "EmployerPhoneNumber",
+      "queryString": {
+        "accept": false,
+        "postName": "employerPhoneNumber",
+        "skip": false
+      },
+      "validationRules": {
+        "required": true
+      },
+      "customValidation": {
+        "phonenumber": {
+          "value": "1",
+          "rules": "\\(?\\d{3}\\)?-? *\\d{3}-? *-?\\d{4}"
+        },
+        "externalValidation": {
+          "method": "commonValidateAPIAJAX",
+          "apiURL": "https://apilayer.net/api/validate?",
+          "apikey": "access_key=86c97b1559bd320f30967010f3150b2b",
+          "isvalueonly": false,
+          "isequalsign": false,
+          "payloadkey": {
+            "number=1": { "name": "EmployerPhoneNumber", "type": "textbox" }
+          }
+        }
+      },
+      "value": "",
+      "extendWidth": false,
+      "postData": "phonenumber",
+      "columnStyle": "text-control-align col-sm-6 col-xs-12",
+      "isEmploymentInformation": true,
+      "employmentInformationLevel": 0,
+      "summarySection": "EmploymentInformation",
+      "summaryInfo": {
+        "title": "Phone Number:",
+        "controlType": "masked-text",
+        "editable": true,
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "postData": "borrowers[0].employmentInformation[0].employerPhoneNumber",
+        "prefix": "",
+        "suffix": "",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 67,
+      "name": "employerSecondaryphonenumber",
+      "type": "masked-text",
+      "title": "Secondary Phone Number",
+      "placeholder": "(xxx) xxx-xxxx",
+      "pattern": "phone",
+      "errormessage": "Invalid Secondary Phone Number",
+      "required": "",
+      "showTitle": true,
+      "focus": false,
+      "col": 6,
+      "stateName": "EmployerSecondaryphonenumber",
+      "queryString": {
+        "accept": false,
+        "postName": "employerSecondaryphonenumber",
+        "skip": false
+      },
+      "validationRules": {
+        "required": true
+      },
+      "value": "",
+      "extendWidth": true,
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 ",
+      "isEmploymentInformation": true,
+      "employmentInformationLevel": 0
+    },
+    {
+      "id": 39,
+      "name": "employerDetails",
+      "backBtn": true,
+      "type": "group",
+      "subquestions": [11013, 31, 66]
+    },
+
+    {
+      "id": 41,
+      "name": "additionalBorrower",
+      "type": "button",
+      "title": "Would you like to add an additional borrower?",
+      "placeholder": "CoBorrower",
+      "errormessage": "",
+      "required": "",
+      "showTitle": true,
+      "listItem": "addCoBorrowerList",
+      "focus": true,
+      "stateName": "AdditionalBorrower",
+      "queryString": {
+        "accept": false,
+        "postName": "additionalBorrower",
+        "skip": false
+      },
+      "validationRules": {
+        "required": true
+      },
+      "value": "",
+      "postData": "addcoborrower",
+      "listName": "addCoBorrowerList",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 "
+    },
+    {
+      "id": 161,
+      "name": "login",
+      "stateName": "Login",
+      "type": "group",
+      "title": "Acceso",
+      "apikey": "action=los_engine_create_borrowers",
+      "action": "los_engine_create_borrowers",
+      "employmentStateName": "EmploymentStatus",
+      "payloadkey": {
+        "wpcustom_user_email": "email",
+        "wpcustom_user_bank_slug": "woodforest",
+        "wpcustom_user_fname": "firstName",
+        "wpcustom_user_uuid": "email",
+        "wpcustom_user_pass": "password",
+        "wpcustom_user_pass_confirm": "password"
+      },
+      "loaderMessage": "Creating your account please wait ...",
+      "showDynamicModalPopup": true,
+      "contentType": true,
+      "dynamicModalPopupContent": "<h3>Thank you!</h3><h4>Your account has been created.</h4><h4>We are sending an email to your inbox with a link to verify your account.</h4><h4>In order to access your account in future, you will need to click the link in that email to verify the account (you do not need to do it at this time).</h4><br/>",
+      "dynamicModalPopupButtonText": "Continue with Application",
+      "nextFocusElement": "employerName",
+      "subquestions": [162, 163, 164]
+    },
+    {
+      "id": 162,
+      "name": "email",
+      "stateName": "Email",
+      "type": "login",
+      "title": "Great Choice!",
+      "description": "Let's create your account.",
+      "fieldtitle": "Email:",
+      "placeholder": "Email Address",
+      "errormessage": "Please enter a valid Email Address",
+      "required": "Please enter Email Address",
+      "showTitle": true,
+      "focus": false,
+      "postData": "emailAddress",
+      "isDisabled": true,
+      "customValidation": {
+        "EmailAddress": {
+          "value": "1",
+          "rules": "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        }
+      }
+    },
+    {
+      "id": 163,
+      "name": "password",
+      "stateName": "Password",
+      "type": "login",
+      "title": "Enter Password:",
+      "placeholder": "Enter Password",
+      "required": "Please enter a password",
+      "errormessage": "Passwords do not match!",
+      "showTitle": false,
+      "focus": true,
+      "customValidationPrefix": "At least",
+      "validationRules": {
+        "required": true
+      },
+      "customValidation": {
+        "characters": { "value": 8, "label": "characters" },
+        "lowercase letter": {
+          "value": "1",
+          "rules": "[a-z]",
+          "label": "lowercase letter"
+        },
+        "uppercase letter": {
+          "value": "1",
+          "rules": "[A-Z]",
+          "label": "uppercase letter"
+        },
+        "number": { "value": "1", "rules": "[0-9]", "label": "number" },
+        "special character": {
+          "value": "1",
+          "rules": "[!@#$%^&*]",
+          "label": "special character"
+        }
+      }
+    },
+    {
+      "id": 164,
+      "name": "verifyPassword",
+      "stateName": "VerifyPassword",
+      "type": "login",
+      "title": "Verify Password:",
+      "placeholder": "Verify Password",
+      "required": "Please verify password",
+      "errormessage": "Passwords do not match!",
+      "showTitle": false,
+      "focus": false,
+      "match": {
+        "password": true
+      },
+      "validationRules": {
+        "required": true
+      },
+      "value": ""
+    },
+    {
+      "id": 165,
+      "name": "bankLinking",
+      "stateName": "BankLinking",
+      "backBtn": true,
+      "type": "bank-link",
+      "title": "Connect Your Bank Account",
+      "plaidDescription": "We partner with Plaid, which allows you to securely connect your bank account, so we can verify your income and/or bank account information for funding purposes.",
+      "plaidButtonText": "Proceed with Plaid",
+      "bankDescription": "If you don't want to use Plaid, click the link below to submit manual bank statements. We'll need to review them manually, which may delay your application.",
+      "bankButtonText": "Proceed without Plaid",
+      "errormessage": "Please select PDF, JPG, JPEG, PNG format below 2MB",
+      "showTitle": false,
+      "focus": true,
+      "defaultLanguage": "en",
+      "columnStyle": " text-control-align col-sm-12 col-xs-12 bank-info",
+      "showActionButton": "no",
+      "formSubmissionCount": 6,
+      "submitForm": true,
+      "formPostURL": "/personal-loan/plaid-submit",
+      "nextpage": {
+        "Default": "docusign",
+        "withoutPlaid": "bankfileupload"
+      },
+      "action": "los_engine_process_plaidDV",
+      "apikey": "action=los_engine_process_plaidDV",
+      "loaderMessage": "Validating Bank Account <br/> Linking Bank Account <br/> Generating Documents for Signature",
+      "delayMessageDisplay": true
+    },
+    {
+      "id": 166,
+      "name": "PinwheelLinking",
+      "stateName": "PinwheelLinking",
+      "type": "pinwheel-link",
+      "title": "Let's Verify Your Income",
+      "pinwheelDescription": "To verify your income, we have partnered with Pinwheel. With Pinwheel, you can securely connect to your payroll, allowing us to verify your income immediately.",
+      "pinwheelButtonText": "Proceed with Pinwheel",
+      "bankDescription": "If you do not wish to proceed with Pinwheel, you can choose to provide bank statements by clicking on the hyperlink below.",
+      "errormessage": "Please select PDF, JPG, JPEG, PNG, TXT, DOC, DOCX format below 2MB",
+      "showTitle": false,
+      "focus": true,
+      "defaultLanguage": "en",
+      "formSubmissionCount": 5,
+      "submitForm": true,
+      "formPostURL": "/personal-loan/pinwheel-submit",
+      "columnStyle": " text-control-align col-sm-12 col-xs-12 bank-info",
+      "showActionButton": "no",
+      "bankButtonText": "Proceed without Pinwheel",
+      "action": "los_engine_process_pinwheel",
+      "apikey": "action=los_engine_process_pinwheel",
+      "loaderMessage": "Validating Bank Account <br/> Linking Bank Account <br/> Generating Documents for Signature",
+      "delayMessageDisplay": true
+    },
+    {
+      "id": 167,
+      "name": "withoutPlaid",
+      "type": "group",
+      "title": "Información de cuenta bancaria",
+      "formSubmissionCount": 3,
+      "submitForm": true,
+      "formPostURL": "/personal-loan/data-submit",
+      "subquestions": [168, 169, 170]
+    },
+    {
+      "id": 168,
+      "name": "bankName",
+      "stateName": "BankName",
+      "type": "text",
+      "titlebold": "Verify Your Bank Account",
+      "description": "We need to verify the bank account where funds will be deposited and from which payments will be deducted.",
+      "placeholder": "Bank Name",
+      "required": "Please enter Bank Name",
+      "validationRules": {
+        "required": true
+      },
+      "showTitle": true,
+      "focus": true,
+      "display": false,
+      "value": "",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 bank-info"
+    },
+    {
+      "id": 169,
+      "name": "bankRoutingNumber",
+      "stateName": "BankRoutingNumber",
+      "type": "masked-text",
+      "title": "Bank Routing Number",
+      "placeholder": "xxxxxxxxx",
+      "errormessage": "",
+      "validationRules": {
+        "required": true
+      },
+      "required": "Please enter Routing Number",
+      "showTitle": false,
+      "focus": false,
+      "display": false,
+      "pattern": "bankRoutingNumber",
+      "value": "",
+      "columnStyle": "text-control-align col-sm-6 col-xs-12 "
+    },
+    {
+      "id": 170,
+      "name": "bankAccountNumber",
+      "stateName": "BankAccountNumber",
+      "type": "masked-text",
+      "title": "Bank Account Number",
+      "placeholder": "xxxxxxxxxx-xx",
+      "errormessage": "",
+      "validationRules": {
+        "required": true
+      },
+      "required": "Please enter Account Number",
+      "showTitle": false,
+      "focus": false,
+      "display": false,
+      "pattern": "bankAccountNumber",
+      "value": "",
+      "columnStyle": "text-control-align col-sm-6 col-xs-12 "
+    },
+    {
+      "id": 171,
+      "name": "fileupload",
+      "type": "group",
+      "title": "Información de cuenta bancaria",
+      "subquestions": [1022, 172, 173],
+      "submitForm": true,
+      "formSubmissionCount": 3,
+      "formPostURL": "/personal-loan/bank-linking/"
+    },
+    {
+      "id": 172,
+      "name": "photoID[]",
+      "stateName": "PhotoID",
+      "type": "file-upload",
+      "inputType": "file",
+      "title": "Front",
+      "placeholder": "Title.jpg",
+      "errormessage": "Please select PDF, JPG, JPEG, PNG format below 2MB",
+      "showTitle": true,
+      "focus": true,
+      "contentType": true,
+      "allowedFormats": ["pdf", "png", "jpeg", "jpg"],
+      "maxFileSize": "2",
+      "apikey": "action=los_engine_document_upload&documentType=PhotoID",
+      "action": "los_engine_document_upload&documentType=PhotoID",
+      "payloadkey": {
+        "docType[]": "PhotoID"
+      },
+      "validationRules": {
+        "required": false
+      },
+      "buttonText": "Upload File",
+      "loaderMessage": "Uploading File...",
+      "columnStyle": " text-control-align col-sm-12 col-xs-12 photograph"
+    },
+    {
+      "id": 173,
+      "name": "bankStatement[]",
+      "stateName": "BankStatement",
+      "type": "file-upload",
+      "inputType": "file",
+      "title": "Back",
+      "placeholder": "Title.jpg",
+      "errormessage": "Please select PDF, JPG, JPEG, PNG format below 2MB",
+      "showTitle": true,
+      "focus": true,
+      "contentType": true,
+      "allowedFormats": ["pdf", "png", "jpeg", "jpg"],
+      "maxFileSize": "2",
+      "apikey": "action=los_engine_document_upload&documentType=BankStatement",
+      "action": "los_engine_document_upload&documentType=BankStatement",
+      "buttonText": "Continue",
+      "payloadkey": {
+        "docType[]": "BankStatement"
+      },
+      "validationRules": {
+        "required": false
+      },
+      "columnStyle": " text-control-align col-sm-12 col-xs-12 capitalize",
+      "loaderMessage": "Uploading File...",
+      "nextpage": {
+        "Default": "docusign"
+      }
+    },
+    {
+      "id": 175,
+      "name": "bankfileupload",
+      "type": "group",
+      "backBtn": true,
+      "title": "Información de cuenta bancaria",
+      "subquestions": [1111, 176, 177],
+      "showActionButton": "Yes",
+      "buttonText": "Continue",
+      "submitForm": true,
+      "formSubmissionCount": 7,
+      "formPostURL": "/personal-loan/income-proof/"
+    },
+    {
+      "id": 1111,
+      "name": "authlable",
+      "type": "label",
+      "titlebold": "Proof of Income and Account Ownership",
+      "showTitle": true,
+      "columnStyle": " text-control-align col-sm-12 col-xs-12 photograph"
+    },
+    {
+      "id": 176,
+      "name": "paystubs[]",
+      "stateName": "paystubs",
+      "type": "file-upload",
+      "inputType": "file",
+      "description2": "Please provide the following documents to verify your income and bank account ownership: Most recent paystub (less than 30 days old) Bank statements showing your name and account number.",
+      "placeholder": "Title.jpg",
+      "errormessage": "Please select PDF, JPG, JPEG, PNG format below 2MB",
+      "showTitle": true,
+      "focus": true,
+      "contentType": true,
+      "allowedFormats": ["pdf", "png", "jpeg", "jpg"],
+      "maxFileSize": "2",
+      "apikey": "action=los_engine_document_upload&documentType=PhotoID",
+      "action": "los_engine_document_upload&documentType=PhotoID",
+      "payloadkey": {
+        "docType[]": "PhotoID"
+      },
+      "validationRules": {
+        "required": false
+      },
+      "buttonText": "Upload File",
+      "loaderMessage": "Uploading File...",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 photograph"
+    },
+    {
+      "id": 177,
+      "name": "statements[]",
+      "stateName": "statements",
+      "type": "file-upload",
+      "inputType": "file",
+      "placeholder": "Title.jpg",
+      "errormessage": "Please select PDF, JPG, JPEG, PNG format below 2MB",
+      "showTitle": true,
+      "focus": true,
+      "contentType": true,
+      "allowedFormats": ["pdf", "png", "jpeg", "jpg"],
+      "maxFileSize": "2",
+      "apikey": "action=los_engine_document_upload&documentType=BankStatement",
+      "action": "los_engine_document_upload&documentType=BankStatement",
+      "buttonText": "Continue",
+      "payloadkey": {
+        "docType[]": "statements"
+      },
+      "validationRules": {
+        "required": false
+      },
+      "columnStyle": " text-control-align col-sm-12 col-xs-12 capitalize",
+      "loaderMessage": "Uploading File..."
+    },
+    {
+      "id": 1022,
+      "name": "docType",
+      "type": "dropdown",
+      "titlebold": "Photo ID",
+      "description": "We require identification in the form of a valid photo ID (e.g. Drivers License, Passport or Valid State Issued ID).",
+      "description2": "Please upload a clear image (front and back) of the ID document below.",
+      "placeholder": "Select the document Type",
+      "errormessage": "Please select the document Type",
+      "required": "Please make a selection",
+      "showTitle": true,
+      "listItem": "docType",
+      "focus": true,
+      "validationRules": {
+        "required": true
+      },
+      "value": "",
+      "stateName": "DocType",
+      "queryString": { "accept": true, "postName": "docType", "skip": true },
+      "postData": "docType",
+      "listName": "docType",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 docType",
+      "summaryInfo": {
+        "title": "Document Type",
+        "controlType": "dropdown",
+        "editable": false,
+        "postData": "borrowers[0].docType",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 "
+      }
+    },
+    {
+      "id": 174,
+      "name": "docusign",
+      "type": "docusign",
+      "title": "You're almost finished !",
+      "titleClass": "col-sm-12 col-xs-12 docusign",
+      "description": "For document signatures, we have partnered with Docusign. When you click the Proceed button below, you will be transfered to Docusign. Once there, simply click the yellow start button and sign and intial as prompted. When you are finished, you will be returned here.",
+      "showTitle": false,
+      "buttonText": "Proceed with Docusign",
+      "focus": true,
+      "stateName": "docusignUrl",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 ",
+      "showActionButton": "no"
+    },
+    {
+      "id": 200,
+      "name": "thankYou",
+      "type": "label",
+      "title": "Thanks for submitting your application with Wallet Wizard! We will get back to you once we verify your details.",
+      "showTitle": true,
+      "showActionButton": "Yes",
+      "customBTN": true,
+      "customButtonText": "Application Dashboard",
+      "submitForm": true,
+      "formPostURL": "/application-status/"
+    },
+    {
+      "id": 301,
+      "name": "lenderName",
+      "type": "label",
+      "summarySection": "LoanInformation",
+      "summaryInfo": {
+        "title": "Lender Name:",
+        "controlType": "label",
+        "editable": false,
+        "postData": "borrowers[0].offerData.lenderName",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 302,
+      "name": "APR",
+      "type": "label",
+      "summarySection": "LoanInformation",
+      "summaryInfo": {
+        "title": "ABR:",
+        "controlType": "label",
+        "editable": false,
+        "postData": "borrowers[0].offerData.APR",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "prefix": "",
+        "suffix": "%",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 303,
+      "name": "term",
+      "type": "label",
+      "summarySection": "LoanInformation",
+      "summaryInfo": {
+        "title": "Term:",
+        "controlType": "label",
+        "editable": false,
+        "postData": "borrowers[0].offerData.term",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "prefix": "",
+        "suffix": " Meses",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 304,
+      "name": "monthlyPayment",
+      "type": "label",
+      "isNumber": true,
+      "summarySection": "LoanInformation",
+      "summaryInfo": {
+        "title": "Monthly Payment:",
+        "controlType": "label",
+        "editable": false,
+        "postData": "borrowers[0].offerData.monthlyPayment",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 500,
+      "name": "blankRow",
+      "type": "label",
+      "title": "",
+      "summarySection": "PrimaryBorrower",
+      "summaryInfo": {
+        "title": "",
+        "editable": false,
+        "controlType": "label",
+        "postData": "",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 506,
+      "name": "blankRow",
+      "type": "label",
+      "title": "",
+      "summarySection": "EmploymentInformation",
+      "summaryInfo": {
+        "title": "",
+        "editable": false,
+        "controlType": "label",
+        "postData": "",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 501,
+      "name": "blankRow",
+      "type": "label",
+      "title": "",
+      "summarySection": "CoBorrower",
+      "summaryInfo": {
+        "title": "",
+        "editable": false,
+        "controlType": "label",
+        "postData": "",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "titleCSS": "col-sm-3 col-xs-6 summarypage-margin-zero"
+      }
+    },
+    {
+      "id": 503,
+      "name": "borrowerConsent",
+      "type": "label",
+      "errormessage": "",
+      "required": "Marque al menos un tipo de producto",
+      "showCheckbox": true,
+      "stateName": "BorrowerConsent",
+      "summarySection": "CheckBoxSection",
+      "summaryInfo": {
+        "title": "I consent to Wallet Wizard obtaining a hard pull credit report on me in connection with my application for a loan with Wallet Wizard. I understand that  this hard pull credit report may negatively impact my credit score and that it will be used by Wallet Wizard in evaluating my loan application.",
+        "controlType": "label",
+        "editable": false,
+        "postData": "this.props.configSettings.themeConfig.consentText",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "isMandatoryConsent": true,
+        "isConsent": true,
+        "titleCSS": "col-sm-12 col-xs-12 summarypage-margin-zero employmentConsent-sp"
+      }
+    },
+    {
+      "id": 507,
+      "name": "borrowerConsent1",
+      "type": "label",
+      "errormessage": "",
+      "required": "Marque al menos un tipo de producto",
+      "showCheckbox": true,
+      "stateName": "BorrowerConsent1",
+      "summarySection": "CheckBoxSection",
+      "summaryInfo": {
+        "title": "I consent to Wallet Wizard verifying my income and employment (where applicable). I agree that Wallet Wizard may verify my income and employment by contacting my employer, through the use of third-party vendors, or through any other means.",
+        "controlType": "label",
+        "editable": false,
+        "postData": "this.props.configSettings.themeConfig.consentText",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "isMandatoryConsent": true,
+        "isConsent": true,
+        "titleCSS": "col-sm-12 col-xs-12 col-md-11 col-lg-11 summarypage-margin-zero employmentConsent-sp"
+      }
+    },
+    {
+      "id": 508,
+      "name": "borrowerConsent2",
+      "type": "label",
+      "errormessage": "",
+      "required": "Marque al menos un tipo de producto",
+      "showCheckbox": true,
+      "stateName": "borrowerConsent2",
+      "summarySection": "CheckBoxSection",
+      "summaryInfo": {
+        "title": "I certify that the information I have supplied under this loan application is true and correct.",
+        "controlType": "label",
+        "editable": false,
+        "postData": "this.props.configSettings.themeConfig.consentText",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "isConsent": true,
+        "isMandatoryConsent": true,
+        "titleCSS": "col-sm-12 col-xs-12 col-md-11 col-lg-11 summarypage-margin-zero employmentConsent-sp"
+      }
+    },
+    {
+      "id": 504,
+      "name": "coBorrowerConsent",
+      "type": "label",
+      "errormessage": "",
+      "required": "Marque al menos un tipo de producto",
+      "showCheckbox": true,
+      "stateName": "CoBorrowerConsent",
+      "summarySection": "CoBorrower",
+      "summaryInfo": {
+        "title": "I consent to <b>GDSLink</b> conducting a hard credit pull.",
+        "controlType": "label",
+        "editable": false,
+        "postData": "",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 ",
+        "isConsent": true,
+        "titleCSS": "col-sm-9 col-xs-6 summarypage-margin-zero coborrower-sp"
+      }
+    },
+    {
+      "id": 505,
+      "name": "desiredTerm",
+      "type": "dropdown",
+      "title": "Plazo del préstamo deseado",
+      "placeholder": "Seleccione un plazo de préstamo",
+      "errormessage": "Por favor haga su selección",
+      "required": "Por favor haga su selección",
+      "showTitle": true,
+      "listItem": "loanTermList",
+      "focus": true,
+      "validationRules": {
+        "required": true
+      },
+      "value": "",
+      "stateName": "DesiredTerm",
+      "queryString": {
+        "accept": true,
+        "postName": "desiredTerm",
+        "skip": true
+      },
+      "postData": "desiredTerm",
+      "listName": "loanTermList",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 ",
+      "summarySection": "LoanInformation",
+      "summaryInfo": {
+        "title": "Desired Loan",
+        "controlType": "dropdown",
+        "editable": false,
+        "postData": "borrowers[0].offerData.desiredTerm",
+        "columnStyle": "text-control-align col-sm-6 col-xs-12 "
+      }
+    },
+    {
+      "id": 1008,
+      "name": "agreementTerms",
+      "type": "consent",
+      "title": "This will NOT affect your credit.",
+      "showCheckbox": true,
+      "showTitle": true,
+      "showButton": false,
+      "focus": true,
+      "defaultChecked": false,
+      "required": "sdjhsfdhadfhadsfl",
+      "titleClass": "col-sm-12 col-xs-12",
+      "stateName": "AgreementTerms",
+      "errorId": "errAgreementTerms",
+      "postData": "agreementTerms",
+      "queryString": {
+        "accept": false,
+        "postName": "agreementTerms",
+        "skip": false
+      },
+      "consentText": "<p class='formlist'>By checking this box, I consent to Wallet Wizard obtaining a soft pull credit report on my in connect with my credit prequalification for a loan with Wallet Wizard. I understand that this soft pull credit report will not negatively impact my credit score, but will be used by Wallet Wizard in evaluating a loan offer.<span class='formerror-agreement' id='errAgreementTerms'>Please agree to terms and conditions</span></p> ",
+      "validationRules": {
+        "required": true
+      },
+      "value": "",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 displayTable ",
+      "extendWidth": true
+    },
+    {
+      "id": 1009,
+      "name": "agreeTCPA",
+      "type": "consent",
+      "title": "",
+      "showCheckbox": true,
+      "showTitle": false,
+      "showButton": false,
+      "focus": true,
+      "titleClass": "col-sm-12 col-xs-12",
+      "defaultChecked": false,
+      "stateName": "AgreeTCPA",
+      "errorId": "errAgreeTCPA",
+      "postData": "agreeTCPA",
+      "queryString": {
+        "accept": false,
+        "postName": "agreeTCPA",
+        "skip": false
+      },
+      "consentText": "<p class='formlist2'>By submitting my information, I certify that I am a U.S. resident, at least 18 years of age and agree to our <a href='/terms-of-use' target='_blank' rel='noopener noreferrer' class='underline-on-hover'>Terms of conditions</a>, <a href='/privacy-policy' target='_blank' rel='noopener noreferrer' class='underline-on-hover'>Privacy Policy</a>, and <a href='/e-sign' target='_blank' class='underline-on-hover'>Consent to Electronic Communications</a>. <span class='formerror-agreement' id='errAgreeTCPA'>Please agree to terms and conditions</span></p> ",
+      "validationRules": {
+        "required": true
+      },
+      "value": "",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 ",
+      "extendWidth": true
+    },
+    {
+      "id": 1040,
+      "name": "agreeWWTC",
+      "type": "consent",
+      "title": "",
+      "showCheckbox": true,
+      "showTitle": false,
+      "showButton": false,
+      "focus": false,
+      "titleClass": "col-sm-12 col-xs-12",
+      "defaultChecked": false,
+      "stateName": "AgreeWWTC",
+      "errorId": "errAgreeWWTC",
+      "postData": "agreeWWTC",
+      "queryString": {
+        "accept": false,
+        "postName": "agreeWWTC",
+        "skip": false
+      },
+      "consentText": "<p class='formlist2'> I agree to allow Wallet Wizard to call or text me at the phone numbers I have provided to discuss my application for credit and for other marketing purposes.<span class='formerror-agreement' id='errAgreeWWTC'>Please agree to terms and conditions</span></p>",
+      "validationRules": {
+        "required": true
+      },
+      "value": "",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 ",
+      "extendWidth": true
+    },
+    {
+      "id": 1010,
+      "name": "consents",
+      "type": "group",
+      "submitForm": true,
+      "subquestions": [58, 1008, 1009, 1040]
+    },
+    {
+      "id": 1011,
+      "name": "reCaptcha",
+      "type": "captcha",
+      "title": "This will NOT affect your credit.",
+      "errormessage": "Comprueba que no soy un robot.",
+      "required": "Comprueba que no soy un robot.",
+      "showCheckbox": true,
+      "showTitle": true,
+      "focus": true,
+      "titleClass": "col-sm-12 col-xs-12",
+      "stateName": "ReCaptcha",
+      "errorId": "errAgreePqTerms",
+      "postData": "borrowers[0].captcha",
+      "queryString": { "accept": false, "postName": "captcha", "skip": false },
+      "validationRules": {
+        "required": true
+      },
+      "value": "",
+      "columnStyle": "text-control-align col-sm-12 col-xs-12 captchaposition ",
+      "extendWidth": true
+    },
+    {
+      "id": 1016,
+      "name": "pending",
+      "type": "label",
+      "title": "pendiente",
+      "description": "Aprobación pendiente",
+      "showTitle": true,
+      "showActionButton": "no"
+    },
+    {
+      "id": 1017,
+      "name": "declined",
+      "type": "label",
+      "title": "la disminución",
+      "description": "Solicitud rechazada",
+      "showTitle": true,
+      "showActionButton": "Yes"
+    },
+    {
+      "id": 350,
+      "formSubmissionCount": 4,
+      "submitForm": true,
+      "name": "manualDoc",
+      "title": "Manual Document"
+    },
+    {
+      "id": 1020,
+      "name": "ManualDocument[]",
+      "stateName": "ManualDocument",
+      "type": "file-upload",
+      "inputType": "file",
+      "title": "Extracto de cuenta",
+      "description": "Requerimos los extractos bancarios más recientes de la cuenta que ingresó en el paso anterior. Cargue sus documentos utilizando las entradas a continuación.",
+      "placeholder": "Título.jpg",
+      "errormessage": "Seleccione el formato PDF, JPG, JPEG, PNG, TXT, DOC, DOCX por debajo de 2 MB",
+      "showTitle": true,
+      "focus": true,
+      "contentType": true,
+      "allowedFormats": ["pdf", "png", "jpeg", "txt", "doc", "docx"],
+      "maxFileSize": "2",
+      "apikey": "action=los_engine_document_upload&documentType=ManualDocument",
+      "action": "los_engine_document_upload&documentType=ManualDocument",
+      "buttonText": "Continue",
+      "payloadkey": {
+        "docType[]": "ManualDocument"
+      },
+      "validationRules": {
+        "required": false
+      },
+      "columnStyle": " text-control-align col-sm-12 col-xs-12 capitalize",
+      "loaderMessage": "Subiendo archivo...",
+      "nextpage": {
+        "Default": "declined"
+      }
+    },
+    {
+      "id": 205,
+      "name": "thankyoupage",
+      "type": "label",
+      "title": "Thank you for choosing Wallet Wizard to assist you with your Personal Loan needs!",
+      "description": "Let's get started!",
+      "showTitle": true,
+      "buttonText": "Continue",
+      "showActionButton": "yes"
+    },
+    {
+      "id": 1021,
+      "name": "declined",
+      "type": "label",
+      "title": "la disminución",
+      "description": "Solicitud rechazada",
+      "showTitle": true,
+      "showActionButton": "Yes"
+    }
+  ],
+  "versions": [
+    {
+      "versionNumber": "default",
+      "questions": [
+        39, 40, 205, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 1010, 39, 40, 171, 167,
+        166, 165, 175, 174, 200, 174
+      ],
+      "summaryQuestions": [
+        1, 2, 51, 52, 53, 54, 55, 4, 5, 7, 8, 9, 10, 11, 12, 58, 1008, 1009,
+        1040, 31, 66, 503, 507, 508
+      ]
+    },
+    {
+      "versionNumber": "1",
+      "questions": [166, 1, 4, 5, 7, 8, 167]
+    },
+    {
+      "versionNumber": "2",
+      "questions": [
+        166, 12, 1010, 39, 40, 171, 167, 166, 165, 175, 174, 200, 174
+      ],
+      "summaryQuestions": [
+        1, 2, 51, 52, 53, 54, 55, 4, 5, 7, 8, 9, 10, 11, 12, 58, 1008, 1009,
+        1040, 31, 66, 503, 507, 508
+      ]
+    }
+  ]
+}

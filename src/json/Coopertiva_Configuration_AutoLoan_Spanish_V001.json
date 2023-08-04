@@ -1,0 +1,651 @@
+{
+	"lenderInfo": [{
+		"lender": "SoFi",
+		"partnerId": "1",
+		"featured": 1,
+		"lenderLogo": "/wp-content/themes/pr-flat-responsive-pro-child/images/Lender_Logo_300x100/SoFi.png",
+		"noFees": true,
+		"acceptsCoBorrower": true
+	}, {
+		"lender": "Marlette",
+		"partnerId": "2",
+		"featured": 1,
+		"lenderLogo": "/wp-content/themes/pr-flat-responsive-pro-child/images/Lender_Logo_300x100/BestEgg.png",
+		"noFees": true,
+		"acceptsCoBorrower": true
+	}, {
+		"lender": "Upgrade",
+		"partnerId": "4",
+		"featured": 1,
+		"lenderLogo": "/wp-content/themes/pr-flat-responsive-pro-child/images/Lender_Logo_300x100/Upgrade.png",
+		"noFees": true,
+		"acceptsCoBorrower": true
+	}, {
+		"lender": "LendingPoint",
+		"partnerId": "6",
+		"featured": 0,
+		"lenderLogo": "/wp-content/themes/pr-flat-responsive-pro-child/images/Lender_Logo_300x100/LendingPoint.png",
+		"noFees": true,
+		"acceptsCoBorrower": true
+	}, {
+		"lender": "Payoff",
+		"partnerId": "7",
+		"featured": 1,
+		"lenderLogo": "/wp-content/themes/pr-flat-responsive-pro-child/images/Lender_Logo_300x100/Payoff.png",
+		"noFees": true,
+		"acceptsCoBorrower": true
+	}, {
+		"lender": "OneMain",
+		"partnerId": "12",
+		"featured": 1,
+		"lenderLogo": "/wp-content/themes/pr-flat-responsive-pro-child/images/Lender_Logo_300x100/OMF.png",
+		"noFees": false,
+		"acceptsCoBorrower": true
+	}, {
+		"lender": "Prosper",
+		"partnerId": "8",
+		"featured": 1,
+		"lenderLogo": "/wp-content/themes/pr-flat-responsive-pro-child/images/Lender_Logo_300x100/Prosper.png",
+		"noFees": true,
+		"acceptsCoBorrower": true
+	}, {
+		"lender": "CreditSoup",
+		"partnerId": "",
+		"featured": 1,
+		"lenderLogo": "/wp-content/uploads/2018/06/CreditSoup_Logo-HR_160x36.png",
+		"noFees": true,
+		"acceptsCoBorrower": true
+	}, {
+		"lender": "Freedom",
+		"partnerId": "13",
+		"featured": 1,
+		"lenderLogo": "/wp-content/themes/pr-flat-responsive-pro-child/images/Lender_Logo_300x100/FreedomPlus.png",
+		"noFees": true,
+		"acceptsCoBorrower": true
+	}, {
+		"lender": "Lightstream",
+		"partnerId": "14",
+		"featured": 1,
+		"lenderLogo": "/wp-content/themes/pr-flat-responsive-pro-child/images/Lender_Logo_300x100/LightStream.png",
+		"noFees": false,
+		"acceptsCoBorrower": true
+	}, {
+		"lender": "Marcus",
+		"partnerId": "15",
+		"featured": 1,
+		"lenderLogo": "/wp-content/themes/pr-flat-responsive-pro-child/images/Lender_Logo_300x100/Marcus.png",
+		"noFees": true,
+		"acceptsCoBorrower": true
+	}, {
+		"lender": "GDSLink",
+		"partnerId": "17",
+		"featured": 1,
+		"lenderLogo": "/wp-content/themes/prime-rates-gdsbank/images/gds-link-logo.png",
+		"noFees": true,
+		"acceptsCoBorrower": false
+	}, {
+		"lender": "Credible",
+		"partnerId": "18",
+		"featured": 1,
+		"lenderLogo": "/wp-content/themes/prime-rates-gdsbank/images/credible.svg",
+		"noFees": true,
+		"acceptsCoBorrower": false
+	}, {
+		"lender": "lender2",
+		"partnerId": "19",
+		"featured": 1,
+		"lenderLogo": "/wp-content/themes/prime-rates-gdsbank/images/gds-link-logo.png",
+		"noFees": true,
+		"acceptsCoBorrower": false
+	}, {
+		"lender": "Primerates",
+		"partnerId": "16",
+		"featured": 1,
+		"lenderLogo": "/wp-content/plugins/primerate-redirection/images/primerates.png",
+		"noFees": true,
+		"acceptsCoBorrower": true
+	},{
+		"lender": "Coopertiva",
+		"partnerId": "20",
+		"featured": 1,
+		"lenderLogo": "/wp-content/themes/prime-rates-coopertiva/images/coopertiva.svg",
+		"noFees" : true,
+		"acceptsCoBorrower": false
+	}
+	],
+	"themeConfig" : {
+		"host": "dev.woodforest.primerates.com",
+		"slug": "gdslos",
+		"theme": "prime-rates-woodforest",
+		"breadcrumb_css": "BCStyles-woodforest.css",
+		"leadcheck_css": "leadcheck-woodforest.css",
+		"leadcheck_transition_css": "transition-woodforest.css",
+		"breadcrumb_transition_css": "transition-woodforest.css",
+		"offer_css": "offer-woodforest-style.css",
+		"lenderoffer_css": "lenderoffers-woodforest-style.css",
+		"plaid_url": "https://dev.woodforest.primerates.com/plaid.html",
+		"document_text": "Requerimos identificación en forma de una identificación con foto válida (licencia de conducir, pasaporte, identificación estatal o identificación de votante) y los extractos bancarios más recientes para la cuenta que ingresó en el paso anterior. <br> <br> Cargue sus documentos usando las entradas a continuación.",
+		"bank_text_top": "Para verificar su cuenta bancaria, nos asociamos con Plaid. Plaid es un servicio confiable que es ampliamente utilizado por la mayoría de los principales bancos de EE. UU. Le permite iniciar sesión en su banco y elegir la cuenta bancaria en la que le gustaría que se distribuyeran los fondos de su préstamo. Haga clic a continuación para continuar.",
+		"bank_text_bottom": "Si no puede acceder a su banco a través de Plaid, puede hacer clic en el botón 'Continuar sin Plaid' a continuación (esto requerirá una revisión manual de su cuenta bancaria y podría retrasar sus fondos).",
+		"document_thank_you": "Nos comunicaremos con usted una vez que verifiquemos sus datos. ¡Gracias!",
+		"login_header": "¡Gran elección!",
+		"login_header_bottom": "Creemos tu cuenta.",
+		"login_tooltip": "Ingrese una contraseña que cumpla con los siguientes requisitos: - Al menos 8 caracteres, - Al menos 1 letra mayúscula, - Al menos 1 número, - Al menos 1 carácter especial (!@#$%^&*).",
+		"TILA_page": "<h3 style='font-weight:500;text-align:center;'>Estas casi terminada! </h3><h4 class='paragraph-heading'>Solo necesitamos su firma e iniciales en un par de documentos y le enviaremos sus fondos. </h4><h4 class='paragraph-heading'>Para las firmas de documentos, nos hemos asociado con Docusign. Cuando haga clic en el botón Continuar a continuación, será transferido a Docusign. Una vez allí, simplemente haga clic en el botón de inicio amarillo, firme y coloque sus iniciales cuando se le solicite. Cuando haya terminado, volverá aquí.</h4>",
+		"coBorrowerHaderText": "(Coprestatario incluido en la solicitud)",
+		"loadImage": "/wp-content/plugins/primerate-redirection/images/PrimeRates_Icon.jpg",
+		"logo": "/wp-content/plugins/los-engine/los-engine-application/images/coop-logo.png",
+		"consentText": "<p class='CBformlist2'>Autorizo a la <b>Cooperativa Jesús Obrero</b> a realizar la consulta de mi reporte de crédito en la agencia de información crediticia.</p>",
+		"phoneNumberAPIKey": "86c97b1559bd320f30967010f3150b2b",
+		"theme_name": "Jesús Obrero Coopertiva",
+		"googleAPIKey": "AIzaSyANpZbWlnVftI-HYTH8YdmqDBbjIvUndOs",
+		"emailSendEndpoint": "/wp-admin/admin-ajax.php",
+		"apiurl": "/wp-admin/admin-ajax.php",
+		"redirectGDSUrl": "/auto-loan/create-borrower/",
+		"coBorrowerBreadcrumb":"/auto-loan/app-page-1",
+		"redirectUrl": "/auto-loan/redirect",
+		"captchaSiteKey": "6LeUj4QaAAAAAP8sYByD4z1xHHmAHSqr6RThfyWv"
+	},
+	"addressAutoComplete":{
+		"countryCode": ["us", "pr", "vi", "gu", "mp"],
+		"countryLookup": ["puerto rico"]
+	},
+	"formSettings":{
+		"name": "frmPrequalify",
+		"summaryFormName": "frmPrequalify",
+		"urlPath" : "/auto-loan/app-page-",
+		"title":[
+			{ "language" : "english","part1" : "App Page {{X}} |", "part2": " Jesús Obrero Coopertiva"},
+			{ "language" : "spanish","part1" : "Página {{X}} de la aplicación |", "part2": " Jesús Obrero Cooperativa"}
+		],
+		"defaultButtonText" : "Continuar",
+		"defaultFocus":"viewpreqoffers",
+		"plaidKeyAPI": "los_engine_plaid_public_key",
+		"offerSubmitCount": 2,
+		"productType" : "personalLoan",
+		"brandName" : "Coopertiva",
+		"summaryPageHeading1" : "Ya casi finaliza su solicitud!",
+		"summaryPageHeading2" : "Revise la información de su solicitud. Una vez que haya confirmado que es correcta, haga clic en 'Enviar solicitud' y la seguiremos desde aquí.",
+		"summaryPageErrorMessage" : "Corrija los errores que se muestran arriba en rojo.",
+		"summaryPageConsentMessage" : "Por favor autorice a la Cooperativa Jesús Obrero a realizar la consulta de su reporte de crédito.",
+		"summaryPageEditLink" : "haga clic aquí para editar su información",
+		"summaryPageSubmitPopupText" : "Envío de la información completa de su solicitud ...",
+		"hidePartnersLink" : "true",
+		"defaultLender" : "Coopertiva",
+		"progressText" : "Progreso",
+		"listItemHtmlSpace": "<br />"
+	},
+	"fieldSettings":{
+		"prefix" : "",
+		"suffix" : "Value",
+		"currencySymbol" : "$"
+	},
+	"modalTransitionPage":{
+		"logo": "/wp-content/plugins/los-engine/los-engine-application/images/coop-logo.png",
+		"theme_name": "LOS Engine",
+		"content": "Estamos procesando su informacion para brindarte las mejores ofertas.",
+		"loaderText": [
+			"Todavía estamos comprobando...","Gracias por su paciencia...","Solo unos momentos más..."
+		]
+	},
+	"modalOfferTransitionPage":{
+		"logo": "/wp-content/plugins/los-engine/los-engine-application/images/coop-logo.png",
+		"theme_name": "LOS Engine",
+		"content": "Tu oferta ha sido seleccionada, espere..."
+	},
+	"css": {
+		"dropdown":{
+			"title": "fieldname",
+			"sptitle": "spfieldname",
+			"fieldContainer": "form-group",
+			"spfieldContainer": "spform-group",
+			"field": "loan-app form-control form-group",
+			"spField": "loan-app sp-form-control spform-group",
+			"fieldDisabled": "select-disabled",
+			"hasError": "has-error",
+			"errorMargin": "address-margin",
+			"errorBlockHeight": "error-height",
+			"errorBlockSpan": "formerror",
+			"sperrorBlockSpan": "spformerror",
+			"errorBlockSpanMargin": "top-margin-error-message has-error-mac"
+		},
+		"vehicle-dropdown":{
+			"title": "fieldname",
+			"sptitle": "spfieldname",
+			"fieldContainer": "form-group",
+			"spfieldContainer": "spform-group",
+			"field": "loan-app form-control form-group",
+			"spField": "loan-app sp-form-control spform-group",
+			"fieldDisabled": "select-disabled",
+			"hasError": "has-error",
+			"errorMargin": "address-margin",
+			"errorBlockHeight": "error-height",
+			"errorBlockSpan": "formerror",
+			"sperrorBlockSpan": "spformerror",
+			"errorBlockSpanMargin": "top-margin-error-message has-error-mac"
+		},
+		"consent":{
+			"title": "fieldname",
+			"sptitle": "spfieldname",
+			"tooltip": "loan-app info-tooltip",
+			"tooltipText": "tooltiptext tooltip-top-margin-anualincome",
+			"tooltipIcon": "fa fa-info-circle",
+			"fieldContainer": "form-group mobile-text-bottom",
+			"spfieldContainer": "spform-group mobile-text-bottom",
+			"field": "form-control number",
+			"spField": "sp-form-control number",
+			"fieldDisabled": "select-disabled",
+			"hasError": "has-error",
+			"errorMargin": "address-margin",
+			"errorBlockHeight": "error-height",
+			"errorBlockSpan": "formerror",
+			"sperrorBlockSpan": "spformerror"
+		},
+		"captcha":{
+			"title": "fieldname",
+			"sptitle": "spfieldname",
+			"tooltip": "loan-app info-tooltip",
+			"tooltipText": "tooltiptext tooltip-top-margin-anualincome",
+			"tooltipIcon": "fa fa-info-circle",
+			"fieldContainer": "form-group mobile-text-bottom",
+			"spfieldContainer": "spform-group mobile-text-bottom",
+			"field": "form-control number",
+			"spField": "sp-form-control number",
+			"fieldDisabled": "select-disabled",
+			"hasError": "has-error",
+			"errorMargin": "address-margin",
+			"errorBlockHeight": "error-height",
+			"errorBlockSpan": "formerror",
+			"sperrorBlockSpan": "spformerror"
+		},
+		"calculation-desc":{
+			"title": "fieldname",
+			"sptitle": "spfieldname",
+			"fieldContainer": "form-group",
+			"spfieldContainer": "spform-group",
+			"field": "loan-app form-control form-group",
+			"spField": "loan-app sp-form-control spform-group",
+			"fieldDisabled": "select-disabled",
+			"hasError": "has-error",
+			"errorMargin": "address-margin",
+			"errorBlockHeight": "error-height",
+			"errorBlockSpan": "formerror",
+			"sperrorBlockSpan": "spformerror",
+			"errorBlockSpanMargin": "top-margin-error-message has-error-mac"
+		},
+		"text":{
+			"title": "fieldname",
+			"sptitle": "spfieldname",
+			"tooltip": "loan-app info-tooltip",
+			"tooltipText": "tooltiptext tooltip-top-margin-anualincome-sp",
+			"tooltipIcon": "fa fa-info-circle",
+			"fieldContainer": "form-group mobile-text-bottom",
+			"spfieldContainer": "spform-group mobile-text-bottom",
+			"field": "form-control number",
+			"spField": "sp-form-control number form-control",
+			"fieldDisabled": "select-disabled",
+			"hasError": "has-error",
+			"errorMargin": "address-margin",
+			"errorBlockHeight": "error-height",
+			"errorBlockSpan": "formerror",
+			"sperrorBlockSpan": "spformerror"
+		},
+		"login":{
+			"title": "fieldname",
+			"sptitle": "spfieldname",
+			"tooltip": "loan-app info-tooltip",
+			"tooltipText": "tooltiptext tooltip-top-margin-anualincome-sp",
+			"tooltipIcon": "fa fa-info-circle",
+			"fieldContainer": "form-group mobile-text-bottom",
+			"spfieldContainer": "spform-group mobile-text-bottom",
+			"field": "form-control number",
+			"fieldDisabled": "select-disabled",
+			"hasError": "has-error",
+			"errorMargin": "address-margin",
+			"errorBlockHeight": "error-height fieldspace",
+			"errorBlockSpan": "formerror",
+			"errorheadingText": "error-heading",
+			"errormessagelist": "error-messagelist",
+			"loginheadertext": "mycustom_header",
+			"emailtitle": "emailtitle-sp",
+			"prefilledemailtextbox": "emailtextdisplay",
+			"thankyouModaltext": "modaltext",
+			"validpass": "passvalid",
+			"invalidpass": "passinvalid"
+		},
+		"masked-text":{
+			"checkboxContainer": "current-check",
+			"spcheckboxContainer": "spcurrent-check",
+			"checkbox": "chckbox-width chekbox-alignment checkboxalign",
+			"checkboxTitle": "checkbox-title currentPosition",
+			"title": "fieldname",
+			"sptitle": "spfieldname",
+			"tooltip": "loan-app info-tooltip",
+			"tooltipText": "tooltiptext tooltip-top-margin-anualincome-sp",
+			"tooltipIcon": "fa fa-question-circle",
+			"fieldContainer": "form-group mobile-text-bottom",
+			"spfieldContainer": "spform-group mobile-text-bottom",
+			"field": "form-control number",
+			"spField": "sp-form-control number",
+			"fieldDisabled": "select-disabled",
+			"hasError": "has-error",
+			"errorMargin": "address-margin",
+			"errorBlockHeight": "error-height",
+			"errorBlockSpan": "formerror",
+			"sperrorBlockSpan": "spformerror",
+			"errorBlockSpanMargin": "top-margin-error-message has-error-mac"
+		},
+		"button":{
+			"title": "fieldname",
+			"sptitle": "spfieldname",
+			"fieldContainer": "form-group",
+			"spfieldContainer": "spform-group",
+			"field": "btn bc-primary",
+			"errorBlockHeight": "error-height",
+			"errorBlockSpanMargin": "top-margin-error-message has-error-mac"
+		},
+		"fa-button": {
+			"title": "fieldname",
+			"sptitle": "spfieldname",
+			"fieldContainer": "loantypebutton",
+			"spfieldContainer": "spform-group",
+			"field": "bc-primary-loantype",
+			"fabuttontext": "fabuttontext",
+			"errorBlockHeight": "error-height",
+			"errorBlockSpanMargin": "top-margin-error-message has-error-mac"
+		},
+		"checkbox": {
+			"fieldMobile": "checkbox chckbox-width",
+			"field": "chckbox-width chekbox-alignment",
+			"title": " checkbox-title "
+		},
+		"modalPopup":{
+			"container": "modal",
+			"class": "displayblock",
+			"contentContainer":"modal-content",
+			"wrapper": "wrapper loans",
+			"wrapperAddress": "wrapper state address-popup",
+			"logo": "trans-logo",
+			"content": "trans-statment",
+			"buttonwidth": "trans-button",
+			"Modalcontent": "plaidlinktext",
+			"refreshPanelMobile": "load-img-mobile-hs",
+			"refreshPanel": "load-img-hs",
+			"refreshIcon": "fa fa-spin fa-refresh",
+			"loaderContent": "website-text"
+		},
+		"docusign":{
+			"title": "fieldname",
+			"fieldContainer": "form-group",
+			"field": "btn bc-primary",
+			"docusigntext": "paragraph-heading"
+		},
+		"mainContainer":{
+			"container": "container",
+			"row": {
+				"rowPanel": "row",
+				"centerBlock": {
+					"centerBlockPanel":"center-block col-md-12",
+					"centerblockMargin": " access-offer-top-margin ",
+					"mainBox": "box-panel",
+					"mainBoxContent": "container-box-content",
+					"logo":{
+						"logoPanel": "prq-logo",
+						"logoContent": "pqr-logo-img"
+					},
+					"progressBar":{
+						"progressBarContainer": " custom-pdding col-md-6 col-xs-12",
+						"progressBar": "progreesBreadcrumb-bar",
+						"progressBarText": "progreesBreadcrumb-bar-text second-phase-done",
+						"progressBarMargin": "heading-top"
+					},
+					"headerInfoText":{
+						"headerContainer": " col-md-5 col-xs-12 headwayFirstSectionContent",
+						"headerTitle": "firstSectionContenth3",
+						"headerContent": "firstSectionContentp tick",
+						"headerContentIcon": "fa fa-check ",
+						"headerContentOffers": "col-md-5 col-xs-12 headway-view-offer"
+					},
+					"breadcrumbPreloaderContent":{
+						"contentBox": "box_item",
+						"contentBoxMargin": "address",
+						"title": "fieldname",
+						"prequalifyButtonContainer":"col-sm-12 col-xs-12 button-control-align"
+					}
+				}
+			}
+		}
+	},
+	"maskPattern": [
+		{"field": "ssn", "pattern" : "111-11-1111" , "regexRule" : "/^(\\d{3})(\\d{2})(\\d{4}).*/", "regexGroup" : "$1-$2-$3" },
+		{"field": "date", "pattern" : "11/11/1111", "regexRule" : "/^(\\d{2})(\\d{2})(\\d{4}).*/", "regexGroup" : "$1/$2/$3"},
+		{"field": "phone", "pattern" : "(111) 111-1111", "regexRule" : "/^(\\d{3})(\\d{3})(\\d{4}).*/", "regexGroup" : "($1) $2-$3" },
+		{"field": "bankRoutingNumber", "pattern" : "111111111", "regexRule" : "/^(\\d{9}).*/", "regexGroup" : "$1"},
+		{"field": "bankAccountNumber", "pattern" : "1111111111-11",  "regexRule" : "/^(\\d{10})(\\d{2}).*/", "regexGroup" : "$1-$2" }
+	],
+	"loanPurposeList" :[
+		{ "key": "Select", "text": "Select", "label": "Seleccione el propósito de préstamo", "plKey": "ALL" },
+		{ "key": "Personal Loan", "text": "Personal Loan", "label": "Préstamo Personal", "plKey": "Personal Loan" },
+		{ "key": "Green Loan", "text": "Green Loan", "label": "Préstamo Verde", "plKey": "Green Loan" },
+		{ "key": "Electric Generator Loan", "text": "Electric Generator Loan", "label": "Préstamo Para Generador Eléctrico", "plKey": "Electric Generator Loan" }
+	],
+	"stateList":[
+		{"key": "Select", "text": "Select State", "label": "Seleccione estado" },
+		{"key": "Alabama", "text": "Alabama", "label" : "Alabama"},
+		{"key": "Alaska", "text": "Alaska", "label": "Alaska"},
+		{"key": "Arizona","text": "Arizona","label": "Arizona"},
+		{"key": "Arkansas","text": "Arkansas","label": "Arkansas"},
+		{"key": "California","text": "California","label": "California"},
+		{"key": "Colorado","text": "Colorado","label": "Colorado"},
+		{"key": "Connecticut","text": "Connecticut","label": "Connecticut"},
+		{"key": "Delaware","text": "Delaware","label": "Delaware"},
+		{"key": "District of Columbia","text": "District of Columbia","label": "District of Columbia"},
+		{"key": "Florida","text": "Florida","label": "Florida"},
+		{"key": "Georgia","text": "Georgia","label": "Georgia"},
+		{"key": "Guam","text": "Guam","label": "Guam"},
+		{"key": "Hawaii","text": "Hawaii","label": "Hawaii"},
+		{"key": "Idaho","text": "Idaho","label": "Idaho"},
+		{"key": "Illinois","text": "Illinois","label": "Illinois"},
+		{"key": "Indiana","text": "Indiana","label": "Indiana"},
+		{"key": "Iowa","text": "Iowa","label": "Iowa"},
+		{"key": "Kansas","text": "Kansas","label": "Kansas"},
+		{"key": "Kentucky","text": "Kentucky","label": "Kentucky"},
+		{"key": "Louisiana","text": "Louisiana","label": "Louisiana"},
+		{"key": "Maine","text": "Maine","label": "Maine"},
+		{"key": "Marshall Islands","text": "Marshall Islands","label": "Marshall Islands"},
+		{"key": "Maryland","text": "Maryland","label": "Maryland"},
+		{"key": "Massachusetts","text": "Massachusetts","label": "Massachusetts"},
+		{"key": "Michigan","text": "Michigan","label": "Michigan"},
+		{"key": "Minnesota","text": "Minnesota","label": "Minnesota"},
+		{"key": "Mississippi","text": "Mississippi","label": "Mississippi"},
+		{"key": "Missouri","text": "Missouri","label": "Missouri"},
+		{"key": "Montana","text": "Montana","label": "Montana"},
+		{"key": "Nebraska","text": "Nebraska","label": "Nebraska"},
+		{"key": "Nevada","text": "Nevada","label": "Nevada"},
+		{"key": "New Hampshire","text": "New Hampshire","label": "New Hampshire"},
+		{"key": "New Jersey","text": "New Jersey","label": "New Jersey"},
+		{"key": "New Mexico","text": "New Mexico","label": "New Mexico"},
+		{"key": "New York","text": "New York","label": "New York"},
+		{"key": "North Carolina","text": "North Carolina","label": "North Carolina"},
+		{"key": "North Dakota","text": "North Dakota","label": "North Dakota"},
+		{"key": "Ohio","text": "Ohio","label": "Ohio"},
+		{"key": "Oklahoma","text": "Oklahoma","label": "Oklahoma"},
+		{"key": "Oregon","text": "Oregon","label": "Oregon"},
+		{"key": "Palau","text": "Palau","label": "Palau"},
+		{"key": "Pennsylvania","text": "Pennsylvania","label": "Pennsylvania"},
+		{"key": "Puerto Rico","text": "Puerto Rico","label": "Puerto Rico"},
+		{"key": "Rhode Island","text": "Rhode Island","label": "Rhode Island"},
+		{"key": "South Carolina","text": "South Carolina","label": "South Carolina"},
+		{"key": "South Dakota","text": "South Dakota","label": "South Dakota"},
+		{"key": "Tennessee","text": "Tennessee","label": "Tennessee"},
+		{"key": "Texas","text": "Texas","label": "Texas"},
+		{"key": "Utah","text": "Utah","label": "Utah"},
+		{"key": "Vermont","text": "Vermont","label": "Vermont"},
+		{"key": "Virgin Islands","text": "Virgin Islands","label": "Virgin Islands"},
+		{"key": "Virginia","text": "Virginia","label": "Virginia"},
+		{"key": "Washington","text": "Washington","label": "Washington"},
+		{"key": "West Virginia","text": "West Virginia","label": "West Virginia"},
+		{"key": "Wisconsin","text": "Wisconsin","label": "Wisconsin"},
+		{"key": "Wyoming","text": "Wyoming","label": "Wyoming"}
+	],
+	"housingList" : [
+		{ "key": "OWN_WITH_MORTGAGE", "text": "Own – with mortgage", "label": "Propia - con hipoteca", "tabIndex":"1" },
+		{ "key": "OWN_NO_MORTGAGE", "text": "Own – no mortgage", "label": "Propia - sin hipoteca", "tabIndex":"2" },
+		{ "key": "RENT", "text": "Rent", "label": "Alquiler", "tabIndex":"3" },
+		{ "key": "LIVING_RENT_FREE", "text": "Living rent free", "label": "Sin Alquiler", "tabIndex":"4" }
+	],
+	"estimatedCreditScoreList" : [
+		{ "key": "720-850", "text": "Excellent (720-850)", "label": "Excelente<br /> (720-850)", "tabIndex":"1", "icon": "far fa-grin-stars" },
+		{ "key": "680-719", "text": "Good (680-719)", "label": "Bueno<br /> (680-719)", "tabIndex":"2", "icon": "far fa-grin-beam" },
+		{ "key": "620-679", "text": "Average (620-679)", "label": "Promedio<br /> (620-679)", "tabIndex":"3", "icon": "far fa-smile" },
+		{ "key": "350-619", "text": "Poor (below 620)", "label": "Pobre<br /> (below 620)", "tabIndex":"4", "icon": "far fa-frown-open" }
+	],
+	"employmentList" : [
+		{ "key": "FULL_TIME", "text": "Full Time", "label": "Tiempo completo", "tabIndex":"1" },
+		{ "key": "PART_TIME", "text": "Part Time", "label": "Tiempo parcial", "tabIndex":"2" },
+		{ "key": "SELF_EMPLOYED", "text": "Self Employed", "label": "Por cuenta propia", "tabIndex":"3" },
+		{ "key": "RETIRED", "text": "Retired", "label": "Retirado", "tabIndex":"4" },
+		{ "key": "STUDENT", "text": "Student", "label": "Estudiante", "tabIndex":"5" },
+		{ "key": "UNEMPLOYED", "text": "Unemployed", "label": "Desempleado", "tabIndex":"6" },
+		{ "key": "OTHER", "text": "Other Income", "label": "Otros ingresos", "tabIndex":"7" }
+	],
+	"salaryPeriodList" : [
+		{ "key": "Select", "text": "Select", "label": "Frecuencia salarial", "plKey": "Select" },
+		{ "key": "weekly", "text": "Weekly", "label": "Semanal", "plKey": "Weekly" },
+		{ "key": "monthly", "text": "Monthly", "label": "Mensual", "plKey": "Monthly" },
+		{ "key": "yearly", "text": "Yearly", "label": "Anual", "plKey": "Yearly" }
+	],
+	"addCoBorrowerList" : [
+		{ "key": "Yes", "text": "Yes", "label": "sí", "tabIndex":"1" },
+		{ "key": "No, Continue", "text": "No, Continue", "label": "No, continuar", "tabIndex":"2" }
+	],
+	"POBox" : [{ "key": "po box", "value" : "po box"},
+		{ "key": "p.o.", "value" : "p.o."},
+		{ "key": "p. o.", "value" : "p. o."},
+		{ "key": "p.o. box", "value" : "p.o. box"},
+		{ "key": "box", "value" : "box"},
+		{ "key": "p.o box", "value" : "p.o box"}
+	],
+	"loanTermList" : [
+		{ "key": "Select", "text": "Select", "label": "Seleccione el plazo del préstamo", "plKey": "Select" },
+		{ "key": "6", "text": "6 months", "label": "6 meses", "plKey": "6 months" },
+		{ "key": "12", "text": "12 months (1 year)", "label": "12 meses (1 año)", "plKey": "12 months (1 year)" },
+		{ "key": "18", "text": "18 months (1.5 years)", "label": "18 meses (1,5 años)", "plKey": "18 months (1.5 years)" },
+		{ "key": "24", "text": "24 months (2 years)", "label": "24 meses (2 años)", "plKey": "24 months (2 years)" },
+		{ "key": "36", "text": "36 months (3 years)", "label": "36 meses (3 años)", "plKey": "36 months (3 years)" },
+		{ "key": "48", "text": "48 months (4 years)", "label": "48 meses (4 años)", "plKey": "48 months (4 years)" },
+		{ "key": "60", "text": "60 months (5 years)", "label": "60 meses (5 años)", "plKey": "60 months (5 years)" },
+		{ "key": "72", "text": "72 months (6 years)", "label": "72 meses (6 años)", "plKey": "72 months (6 years)" },
+		{ "key": "84", "text": "84 months (7 years)", "label": "84 meses (7 años)", "plKey": "84 months (7 years)" },
+		{ "key": "96", "text": "96 months (8 years)", "label": "96 meses (8 años)", "plKey": "96 months (8 years)" }
+	],
+	"allowedZipCode" : [
+		"00601","00602","00603","00604","00605","00606","00610","00611","00612","00613","00614","00616","00617","00622","00623","00624","00627","00631","00636","00637","00638","00641","00646","00647","00650","00652","00653","00656","00659","00660","00662","00664","00667","00669","00670","00674","00676","00677","00678","00680","00681","00682","00683","00685","00687","00688","00690","00692","00693","00694","00698","00703","00704","00705","00707","00714","00715","00716","00717","00718","00719","00720","00721","00723","00725","00726","00727","00728","00729","00730","00731","00732","00733","00734","00735","00736","00737","00738","00739","00740","00741","00742","00744","00745","00751","00754","00757","00765","00766","00767","00769","00771","00772","00773","00775","00777","00778","00780","00782","00783","00784","00785","00786","00791","00792","00794","00795","00901","00902","00906","00907","00908","00909","00910","00911","00912","00913","00914","00915","00916","00917","00918","00919","00920","00921","00922","00923","00924","00925","00926","00927","00928","00929","00930","00931","00933","00934","00935","00936","00937","00939","00940","00949","00950","00951","00952","00953","00954","00955","00956","00957","00958","00959","00960","00961","00962","00963","00965","00966","00968","00969","00970","00971","00975","00976","00977","00978","00979","00981","00982","00983","00984","00985","00986","00987","00988"
+	],
+	"allowedAreaCode" : [
+		"787","939"
+	],
+	"CarStatusList" : [
+		{ "key": "New", "text": "New", "label": "Nuevo", "tabIndex":"1" },
+		{ "key": "Used", "text": "Used", "label": "Usado", "tabIndex":"2" }
+	],
+	"yesorNoButtonList": [
+		{ "key": "Yes", "text": "Yes", "label": "Si", "tabIndex": "1", "icon": "fa fa-check" },
+		{ "key": "No", "text": "No", "label": "No", "tabIndex": "2", "icon": "fa fa-ban" }
+	],
+	"uploadDocumentList": [{
+		"name": "bankStatement",
+		"value": "Extracto de cuenta",
+		"nextQuestion": "proofofResidence",
+		"isRequire": "true",
+		"statusUpdate": "",
+		"finalQuestion":"docusign"
+	}, {
+		"name": "proofofResidence",
+		"value": "Comprobante de residencia (factura de servicios públicos o correspondencia comercial a su dirección)",
+		"nextQuestion": "proofofInsurance",
+		"isRequire": "true",
+		"statusUpdate": "",
+		"finalQuestion":"docusign"
+	}, {
+		"name": "proofofInsurance",
+		"value": "Prueba de seguro",
+		"nextQuestion": "identification",
+		"isRequire": "true",
+		"statusUpdate": "",
+		"finalQuestion":"docusign"
+	}, {
+		"name": "identification",
+		"value": "Identificación (licencia de conducir, identificación con foto o pasaporte)",
+		"nextQuestion": "purchaseVehicleVIN",
+		"isRequire": "true",
+		"statusUpdate": "",
+		"finalQuestion":"docusign"
+	},
+		{
+			"name": "purchaseVehicleVIN",
+			"value": "Información sobre el vehículo que está comprando",
+			"nextQuestion": "purchaseVehicleYear",
+			"isRequire": "true",
+			"statusUpdate": "",
+			"finalQuestion":"docusign"
+		},
+		{
+			"name": "purchaseVehicleYear",
+			"value": "",
+			"nextQuestion": "purchaseFileUpload",
+			"isRequire": "true",
+			"statusUpdate": "",
+			"finalQuestion":"docusign",
+			"groupQuestion" : "purchaseVehicleVIN"
+		},
+		{
+			"name": "purchaseFileUpload",
+			"value": "",
+			"nextQuestion": "tradingVehicleVIN",
+			"isRequire": "true",
+			"statusUpdate": "",
+			"finalQuestion":"docusign",
+			"groupQuestion" : "purchaseVehicleVIN"
+		},
+		{
+			"name": "tradingVehicleVIN",
+			"value": "Información sobre el vehículo que está intercambiando",
+			"nextQuestion": "tradingVehicleYear",
+			"isRequire": "true",
+			"statusUpdate": "",
+			"finalQuestion":"docusign"
+		},{
+			"name": "tradingVehicleYear",
+			"value": "",
+			"nextQuestion": "tradingFileUpload",
+			"isRequire": "true",
+			"statusUpdate": "",
+			"finalQuestion":"docusign",
+			"groupQuestion" : "purchaseVehicleVIN"
+		},
+		{
+			"name": "tradingFileUpload",
+			"value": "",
+			"nextQuestion": "yourMostRecentPayStub",
+			"isRequire": "true",
+			"statusUpdate": "",
+			"finalQuestion":"docusign"
+		},
+		{
+			"name": "yourMostRecentPayStub",
+			"value": "Su talón de pago más reciente",
+			"nextQuestion": "yourMostRecentTaxReturns",
+			"isRequire": "true",
+			"statusUpdate": "",
+			"finalQuestion":"docusign"
+		}, {
+			"name": "yourMostRecentTaxReturns",
+			"value": "Formularios de impuestos de los últimos dos años",
+			"nextQuestion": "docusign",
+			"isRequire": "true",
+			"statusUpdate": "",
+			"finalQuestion":"docusign"
+		}
+	]
+}

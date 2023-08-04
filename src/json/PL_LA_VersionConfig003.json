@@ -1,0 +1,1121 @@
+{
+	"addressAutoComplete":{	
+		"countryCode": ["us"]	
+	},
+	"formSettings":{
+		"name": "frmPrequalify",
+		"prequalifyPostURL": "/personal-loans/pre-qualify/offers",
+    	"summaryPagePostURL": "/los-full-application/bank-linking",
+    	"zaleaPostURL": "/offers",
+    	"headWayPostURL": "/offers",
+    	"appFormStartPostURL": "/personal-loans/app-form-housing",
+    	"appFormHousingPostURL": "/personal-loans/app-form-pinfo",
+    	"appFormPInfoPostURL": "/personal-loans/app-form-pinfo/offers"
+	},
+	"modalTransitionPage":{
+		"logo": "/wp-content/themes/prime-rates-woodforest/images/headerlogo.png",
+		"theme_name": "Woodforest",
+		"content": "Checking our partner network for loan offers…"
+	},
+	"css": {		
+		"dropdown":{
+			"title": "fieldname",
+			"fieldContainer": "form-group",
+			"field": "loan-app form-control form-group",
+			"fieldDisabled": "select-disabled",
+			"hasError": "has-error",
+			"errorMargin": "address-margin",
+			"errorBlockHeight": "error-height",
+			"errorBlockSpan": "formerror",
+			"errorBlockSpanMargin": "top-margin-error-message has-error-mac"
+		},
+		"text":{
+			"title": "fieldname",
+			"tooltip": "loan-app info-tooltip",
+			"tooltipText": "tooltiptext tooltip-top-margin-anualincome",
+			"tooltipIcon": "fa fa-info-circle",
+			"fieldContainer": "form-group mobile-text-bottom",
+			"field": "form-control number",
+			"fieldDisabled": "select-disabled",
+			"hasError": "has-error",
+			"errorMargin": "address-margin",
+			"errorBlockHeight": "error-height",
+			"errorBlockSpan": "formerror"
+		},
+		"masked-text":{
+			"checkboxContainer": "current-check",
+			"checkbox": "chckbox-width chekbox-alignment",
+			"checkboxTitle": "checkbox-title",
+			"title": "fieldname",
+			"tooltip": "loan-app info-tooltip",
+			"tooltipText": "tooltiptext tooltip-top-margin-anualincome",
+			"tooltipIcon": "fa fa-info-circle",
+			"fieldContainer": "form-group mobile-text-bottom",
+			"field": "form-control number",
+			"fieldDisabled": "select-disabled",
+			"hasError": "has-error",
+			"errorMargin": "address-margin",
+			"errorBlockHeight": "error-height",
+			"errorBlockSpan": "formerror",
+			"errorBlockSpanMargin": "top-margin-error-message has-error-mac"
+		},
+		"button":{
+			"title": "fieldname",
+			"fieldContainer": "form-group",
+			"field": "btn bc-primary",
+			"errorBlockHeight": "error-height",
+			"errorBlockSpanMargin": "top-margin-error-message has-error-mac"
+		},
+		"checkbox": {
+			"fieldMobile": "checkbox chckbox-width",
+			"field": "chckbox-width chekbox-alignment",
+			"title": " checkbox-title "
+		},
+		"modalPopup":{
+			"container": "modal",
+			"class": "displayblock",
+			"contentContainer":"modal-content",
+			"wrapper": "wrapper loans",
+			"wrapperAddress": "wrapper state address-popup",
+			"logo": "trans-logo",
+			"content": "trans-statment",
+            "Modalcontent": "plaidlinktext",
+			"refreshPanelMobile": "load-img-mobile-hs",
+			"refreshPanel": "load-img-hs",
+			"refreshIcon": "fa fa-spin fa-refresh",
+			"loaderContent": "website-text"
+		},
+		"mainContainer":{
+			"container": "container",
+			"row": {
+				"rowPanel": "row",
+				"centerBlock": {
+					"centerBlockPanel":"center-block col-md-12",
+					"centerblockMargin": " access-offer-top-margin ",
+					"mainBox": "box-panel",
+					"mainBoxContent": "container-box-content",
+					"logo":{
+						"logoPanel": "prq-logo",
+						"logoContent": "pqr-logo-img"
+					},
+					"progressBar":{
+						"progressBarContainer": " custom-pdding col-md-6 col-xs-12",
+						"progressBar": "progreesBreadcrumb-bar",
+						"progressBarText": "progreesBreadcrumb-bar-text second-phase-done",
+						"progressBarMargin": "heading-top"
+					},
+					"headerInfoText":{
+						"headerContainer": " col-md-5 col-xs-12 headwayFirstSectionContent",
+						"headerTitle": "firstSectionContenth3",
+						"headerContent": "firstSectionContentp tick",
+						"headerContentIcon": "fa fa-check ",
+						"headerContentOffers": "col-md-5 col-xs-12 headway-view-offer"
+					},
+					"breadcrumbPreloaderContent":{
+						"contentBox": "box_item",
+						"contentBoxMargin": "address",
+						"title": "fieldname",
+						"prequalifyButtonContainer":"col-sm-12 col-xs-12 button-control-align"
+					}
+				}
+			}		
+		}
+	},
+    "questions": [
+		{ 
+			"id": 1, 
+			"name" : "loanPurpose",
+			"stateName" : "LoanPurpose",
+			"state" : "LoanPurpose",
+			"type" : "dropdown",
+			"title" : "What is the purpose of the loan?", 
+			"placeholder" : "Select a loan purpose", 
+			"errormessage" : "Please make a selection.", 
+			"required" : "Please make a selection.", 
+			"showTitle" : true,
+			"listItem":"loanPurposeList1",
+			"focus": true,
+			"validationRules": {
+				"required": true
+			  },
+			"value":"",
+			"postData": "loanPurpose",
+			"listName": "loanPurposeList1"
+        },
+        { 
+			"id": 2, 
+			"name":"loanAmount", 
+			"stateName":"LoanAmount", 
+			"state":"LoanAmount", 
+			"type": "text",
+			"title" : "How much do you wish to borrow?", 
+			"placeholder" : "$0", 
+			"errormessage" : "", 
+			"errormessagecode" : "Enter an amount between ", 			
+			"showTitle" : true,
+			"focus": true,
+			"validationRules": {
+				"required": true,
+				"max": "100000",
+				"min":"3000"
+			  },
+			"value":"",
+			"errorCode": "MinError",
+			"isNumber": true,
+			"postData": "loanamount"
+        },
+        { 
+			"id": 51, 
+			"name":"address1" , 
+			"stateName":"Address1" , 
+			"type": "text",
+			"title" : "Your Street Address", 
+			"placeholder" : "Street address", 
+			"errormessage" : "Only 50 characters is allowed.", 
+			"required" : "Please enter Street Address", 
+			"showTitle" : false,
+			"focus": true,
+			"autoComplete": true,
+			"titleClass": "col-sm-12",
+			"prequalifyButtonClass": " center-align ",
+			"postData": "streetaddress"
+		},
+		{ 
+			"id": 52, 
+			"name":"address2" ,
+			"stateName":"Address2" ,
+			"type": "text",
+			"title" : "Apartment", 
+			"placeholder" : "Apt, Suite, Bldg. (Optional)", 
+			"errormessage" : "Only 20 characters is allowed.", 
+			"required" : "", 
+			"showTitle" : false,
+			"focus": false,
+			"postData": "appartment"
+		},
+		{ 
+			"id": 53, 
+			"name":"city" ,
+			"stateName":"City" ,
+			"type": "text",
+			"title" : "City", 
+			"placeholder" : "City", 
+			"errormessage" : "Invalid city for selected state", 
+			"required" : "Please enter City", 
+			"showTitle" : false,
+			"focus": false,
+			"postData": "city"
+		},
+		{ 
+			"id": 54, 
+			"name":"state",
+			"stateName":"State",
+			"type" : "dropdown",
+			"title" : "",  
+			"placeholder" : "State", 
+			"errormessage" : "", 
+			"required" : "Please make a selection.", 
+			"showTitle" : false,
+			"listItem":"stateList" ,
+			"focus": false,
+			"postData": "state",
+			"listName": "stateList"
+		},
+		{ 
+			"id": 55, 
+			"name":"zipCode",
+			"stateName":"ZipCode",
+			"type": "text",
+			"title" : "What is your zip code?", 
+			"placeholder" : "Zip", 
+			"errormessage" : "Invalid zip code.", 
+			"required" : "Please enter Zip", 
+			"showTitle" : false,
+			"focus": false,
+			"postData": "zipcode"
+		},
+		{ 
+			"id": 303, 
+			"name":"address",
+			"type" : "group",
+			"subquestions": [51,52,53,54,55]
+        },
+        { 
+			"id": 4, 
+			"name":"housingStatus",
+			"stateName":"HousingStatus",
+			"type": "button",
+			"title" : "What is your housing status?", 
+			"placeholder" : "Housing", 
+			"errormessage" : "", 
+			"required" : "Please make a selection.", 
+			"showTitle" : true,
+			"listItem":"housingList",
+			"focus": true,
+			"validationRules": {
+				"required": true
+				
+			  },
+			"value":"",
+			"postData": "housing",
+			"listName": "housingList"
+        },
+        { 
+			"id": 5, 
+			"name":"housingPayment",
+			"stateName":"HousingPayment",
+			"type": "text",
+			"title" : "What is your monthly housing payment?", 
+			"placeholder" : "$0", 
+			"errormessage" : "Invalid Payment.", 
+			"required" : "Please enter Housing Payment.", 
+			"showTitle" : true,
+			"focus": true,
+			"errorCode": "CodeError",
+			"isNumber": true,
+			"postData": "housingPayment"
+        },
+        { 
+			"id": 6, 
+			"name":"creditScore",
+			"stateName":"CreditScore",
+			"type": "button",
+			"title" : "What is your estimated credit score?", 
+			"placeholder" : "Estimated credit score", 
+			"errormessage" : "", 
+			"required" : "Please make a selection.", 
+			"showTitle" : true,
+			"listItem":"estimatedCreditScoreList",
+			"focus": true,
+			"postData": "creditscore",
+			"listName": "estimatedCreditScoreList"
+        },
+        { 
+			"id": 7, 
+			"name":"dateOfBirth",
+			"stateName":"DateOfBirth",
+			"type": "masked-text",
+			"title" : "When were you born?", 
+			"placeholder" : "MM/DD/YYYY", 
+			"errormessage" : "Borrower must be at least 18 years old.", 
+			"required" : "Please enter Birthdate", 
+			"showTitle" : true,
+			"focus": true,
+			"postData": "birthdate"
+        },
+        { 
+			"id": 8, 
+			"name":"employmentStatus",
+			"stateName":"EmploymentStatus",
+			"type": "button",
+			"title" : "What is your employment status?", 
+			"placeholder" : "Employment", 
+			"errormessage" : "", 
+			"required" : "Please make a selection.", 
+			"showTitle" : true,
+			"listItem":"employmentList",
+			"focus": true,
+			"postData": "employment",
+			"listName": "employmentList"
+        },
+        { 
+			"id": 9, 
+			"name":"annualIncome",
+			"stateName":"AnnualIncome",
+			"type": "text",
+			"title" : "Your Gross Annual Income", 
+			"placeholder" : "$0", 
+			"errormessage" : "", 
+			"errormessagecode" : "Insufficient Annual Income",
+			"required" : "Please enter Annual Income", 
+			"showTitle" : true,
+			"focus": true,
+			"errorCode": "MinError",
+			"isNumber": true,
+			"postData": "annualincome"
+        },
+        { 
+			"id": 56, 
+			"name":"firstName",
+			"stateName":"FirstName",
+			"type": "text",
+			"title" : "Your Name", 
+			"placeholder" : "First Name", 
+			"errormessage" : "", 
+			"errormessagecode" : "Please enter you first name.", 
+			"showTitle" : false,
+			"focus": true,
+			"validationRules": {
+				"required": true
+			  },
+			"titleClass": "col-sm-12 col-xs-12",
+			"prequalifyButtonClass": " center-align ",
+			"postData": "firstname"
+        },
+        { 
+			"id": 57, 
+			"name":"lastName",
+			"stateName":"LastName",
+			"type": "text",
+			"title" : "", 
+			"placeholder" : "Last name", 
+			"errormessage" : "", 
+			"errormessagecode" : "Please enter you last name.", 
+			"showTitle" : false,
+			"focus": false,
+			"validationRules": {
+				"required": true
+			  },
+			"postData": "lastname"
+		},{ 
+			"id": 10, 
+			"name":"name",
+			"type": "group",
+			"subquestions": [56,57]
+        },
+		{ 
+			"id": 11, 
+			"name":"primaryPhoneNumber",
+			"stateName":"PrimaryPhoneNumber",
+			"type": "masked-text",
+			"title" : "Primary Phone Number", 
+			"placeholder" : "(xxx) xxx-xxxx", 
+			"errormessage" : "Invalid Primary Phone Number.", 
+			"required" : "Please enter Primary Phone Number", 
+			"showTitle" : true,
+			"focus": true,
+			"col" : 6,
+			"errorCode": "CodeError",
+			"postData": "phonenumber"
+		},		 
+        { 
+			"id": 12, 
+			"name":"emailAddress",
+			"stateName":"EmailAddress",
+			"type": "text",
+			"title" : "Email Address", 
+			"placeholder" : "Email Address", 
+			"errormessage" : "Please enter a valid email address.", 
+			"required" : "Please enter a valid email address.", 
+			"showTitle" : true,
+			"focus": true,
+			"postData": "email"
+        },
+        { 
+			"id": 58, 
+			"name":"SSN",
+			"stateName":"SSN",
+			"type": "masked-text",
+			"title" : "Please enter your SSN", 
+			"placeholder" : "xxx-xx-xxxx", 
+			"errormessage" : "Invalid SSN.", 
+			"required" : "Please enter a valid SSN", 
+			"showTitle" : true,
+			"focus": true,
+			"showConsent" :true,
+			"submitForm": true,
+			"postData": "ssn"
+        },
+        { 
+			"id": 59, 
+			"name":"agreePqTerms",
+			"stateName":"AgreePqTerms",
+			"type": "checkBox", 
+			"showCheckbox" : true,
+            "focus": true,
+            "defaultChecked": false
+        },
+        { 
+			"id": 60, 
+			"name":"agreeTCPA",
+			"stateName":"AgreeTCPA",
+			"type": "checkBox", 
+			"showCheckbox" : true,
+            "focus": true,
+            "defaultChecked": false
+        },
+        { 
+			"id": 13, 
+			"name":"agreeTerms",
+			"type": "group",
+			"subquestions": [58,59,60]
+		},
+		{ 
+			"id": 14, 
+			"name":"secondaryPhoneNumber",
+			"stateName":"SecondaryPhoneNumber",
+			"type": "masked-text",
+			"title" : "Secondary Phone Number", 
+			"placeholder" : "(xxx) xxx-xxxx", 
+			"errormessage" : "Invalid Secondary Phone Number.", 
+			"showTitle" : true,
+			"focus": true,
+			"col" : 6
+		},	
+		{ 
+			"id": 31, 
+			"name":"employerName",
+			"stateName":"EmployerName",
+			"type": "text",
+			"title" : "", 
+			"placeholder" : "Employer Name", 
+			"errormessage" : "Please enter Employer Name", 
+			"required" : "Please enter Employer Name", 
+			"showTitle" : false,
+			"focus": true,
+			"col" : 6
+		},
+		{ 
+			"id": 32, 
+			"name":"position",
+			"stateName":"Position",
+			"type": "text",
+			"title" : "", 
+			"placeholder" : "Position / Title", 
+			"errormessage" : "Please enter Position", 
+			"required" : "Please enter Position", 
+			"showTitle" : false,
+			"focus": false,
+			"col" : 6
+		},
+		{ 
+			"id": 33, 
+			"name":"startDate",
+			"stateName":"StartDate",
+			"type": "masked-text",
+			"title" : "", 
+			"placeholder" : "Start Date (MM/DD/YYYY)", 
+			"errormessage" : "Please enter valid Start Date", 
+			"required" : "Please enter Start Date", 
+			"showTitle" : false,
+			"focus": false,
+			"col" : 6
+		},
+		{ 
+			"id": 34, 
+			"name":"endDate",
+			"stateName":"EndDate",
+			"type": "masked-text",
+			"title" : "", 
+			"placeholder" : "End Date (MM/DD/YYYY)", 
+			"errormessage" : "Please enter valid End Date", 
+			"required" : "Please enter End Date", 
+			"showTitle" : false,
+			"focus": false,
+			"col" : 6,
+			"checkBoxText":"Current Position",
+			"showCheckbox" : true
+		},	
+		{ 
+			"id": 61, 
+			"name":"employerAddress1", 
+			"stateName":"EmployerAddress1", 
+			"type": "text",
+			"title" : "Please enter your current employment information", 
+			"placeholder" : "Employer Street address", 
+			"errormessage" : "Only 50 characters is allowed.", 
+			"required" : "Please enter Street Address", 
+			"showTitle" : false,
+			"focus": false,
+			"col" : 6,
+			"autoComplete": true,
+			"titleClass": "col-sm-12",
+			"prequalifyButtonClass": " center-align "
+		},		
+		{ 
+			"id": 62, 
+			"name":"employerCity",
+			"stateName":"EmployerCity",
+			"type": "text",
+			"title" : "City", 
+			"placeholder" : "Employer City", 
+			"errormessage" : "Invalid city for selected state", 
+			"required" : "Please enter City", 
+			"showTitle" : false,
+			"focus": false,
+			"col" : 4
+		},
+		{ 
+			"id": 63, 
+			"name":"employerState",
+			"stateName":"EmployerState",
+			"type" : "dropdown",
+			"title" : "",  
+			"placeholder" : "Employer State", 
+			"errormessage" : "", 
+			"required" : "Please make a selection.", 
+			"showTitle" : false,
+			"listItem":"stateList" ,
+			"focus": false,
+			"col" : 4
+		},
+		{ 
+			"id": 64, 
+			"name":"employerZipCode",
+			"stateName":"EmployerZipCode",
+			"type": "text",
+			"title" : "What is your zip code?", 
+			"placeholder" : "Employer Zip Code", 
+			"errormessage" : "Invalid zip code.", 
+			"required" : "Please enter Zip", 
+			"showTitle" : false,
+			"focus": false,
+			"col" : 4
+		},
+		{ 
+			"id": 65, 
+			"name":"employerAddress2",
+			"stateName":"EmployerAddress2",
+			"type": "text",
+			"title" : "Apartment", 
+			"placeholder" : "Apt, Suite, Bldg. (Optional)", 
+			"errormessage" : "Only 20 characters is allowed.", 
+			"required" : "", 
+			"showTitle" : false,
+			"focus": false,
+			"col" : 6
+		},
+		{ 
+			"id": 35, 
+			"name":"address1",
+			"type" : "group",
+			"subquestions": [61,65,62,63,64]
+		},
+		{ 
+			"id": 66, 
+			"name":"employerPhoneNumber" ,
+			"stateName":"EmployerPhoneNumber" ,
+			"type": "masked-text",
+			"title" : "", 
+			"placeholder" : "Employer Phone (xxx) xxx-xxxx", 
+			"errormessage" : "Invalid Employer Phone Number.", 
+			"required" : "Please enter Phone Number", 
+			"showTitle" : true,
+			"focus": false,
+			"col" : 6
+		},
+		{ 
+			"id": 67, 
+			"name":"employerSecondaryphonenumber",
+			"stateName":"EmployerSecondaryphonenumber",
+			"type": "masked-text",
+			"title" : "Secondary Phone Number", 
+			"placeholder" : "(xxx) xxx-xxxx", 
+			"errormessage" : "Invalid Secondary Phone Number.", 
+			"required" : "", 
+			"showTitle" : true,
+			"focus": false,
+			"col" : 6
+		},		
+		{ 
+			"id": 36, 
+			"name":"phone",
+			"type" : "group",
+			"subquestions": [66]
+		},	
+		{ 
+			"id": 37, 
+			"name":"salaryAmount",
+			"stateName":"SalaryAmount",
+			"type": "text",
+			"title" : "", 
+			"placeholder" : "Salary Amount", 
+			"errormessage" : "", 
+			"errormessagecode" : "",
+			"required" : "Please enter Salary Amount", 
+			"showTitle" : true,
+			"focus": false,
+			"col" : 6,
+			"isNumber": true
+		},
+		{ 
+			"id": 38, 
+			"name":"salaryPeriod",
+			"stateName":"SalaryPeriod",
+			"type" : "dropdown",
+			"title" : "",  
+			"placeholder" : "Salary Period", 
+			"errormessage" : "", 
+			"required" : "Please make a selection.", 
+			"showTitle" : false,
+			"listItem":"salaryPeriod" ,
+			"focus": false,
+			"col" : 6
+		},
+		{ 
+			"id": 39, 
+			"name":"employerDetails",
+			"type" : "group",
+			"subquestions": [31,32,33,34,37,38,35,36]
+		},     
+		{ 
+			"id": 40, 
+			"name":"summarypage",
+			"stateName":"summarypage",
+			"type" : "summary",
+			"title" : "",
+			"col" : 12
+		},
+		{
+			"id": 41, 
+			"name":"additionalBorrower",
+			"stateName":"AdditionalBorrower",
+			"type": "button",
+			"title" : "Would you like to add an additional borrower?", 
+			"placeholder" : "CoBorrower", 
+			"errormessage" : "", 
+			"required" : "", 
+			"showTitle" : true,
+			"listItem":"AddCoborrower",
+			"focus": true,
+			"postData": "addcoborrower",
+			"listName": "AddCoborrower"
+			},			
+			{ 
+				"id": 151, 
+				"name":"address1" , 
+				"stateName":"CoBorrowerAddress1" , 
+				"type": "text",
+				"title" : "Co-Borrower's Street Address", 
+				"placeholder" : "Street address", 
+				"errormessage" : "Only 50 characters is allowed.", 
+				"required" : "Please enter Street Address", 
+				"showTitle" : false,
+				"focus": true,
+				"autoComplete": true,
+				"titleClass": "col-sm-12",
+				"prequalifyButtonClass": " center-align ",
+				"postData": ""
+			},
+			{ 
+				"id": 152, 
+				"name":"address2" ,
+				"stateName":"CoBorrowerAddress2" ,
+				"type": "text",
+				"title" : "Apartment", 
+				"placeholder" : "Apt, Suite, Bldg. (Optional)", 
+				"errormessage" : "Only 20 characters is allowed.", 
+				"required" : "", 
+				"showTitle" : false,
+				"focus": false
+			},
+			{ 
+				"id": 153, 
+				"name":"city" ,
+				"stateName":"CoBorrowerCity" ,
+				"type": "text",
+				"title" : "City", 
+				"placeholder" : "City", 
+				"errormessage" : "Invalid city for selected state", 
+				"required" : "Please enter City", 
+				"showTitle" : false,
+				"focus": false
+			},
+			{ 
+				"id": 154, 
+				"name":"state",
+				"stateName":"CoBorrowerState",
+				"type" : "dropdown",
+				"title" : "",  
+				"placeholder" : "State", 
+				"errormessage" : "", 
+				"required" : "Please make a selection.", 
+				"showTitle" : false,
+				"listItem":"stateList" ,
+				"focus": false,
+				"listName": "stateList"
+			},
+			{ 
+				"id": 155, 
+				"name":"zipCode",
+				"stateName":"CoBorrowerZipCode",
+				"type": "text",
+				"title" : "What is your zip code?", 
+				"placeholder" : "Zip", 
+				"errormessage" : "Invalid zip code.", 
+				"required" : "Please enter Zip", 
+				"showTitle" : false,
+				"focus": false
+			},
+			{ 
+				"id": 103, 
+				"name":"address",
+				"type" : "group",
+				"subquestions": [151,152,153,154,155]
+			},
+			{ 
+				"id": 104, 
+				"name":"housingStatus",
+				"stateName":"CoBorrowerHousingStatus",
+				"type": "button",
+				"title" : "What is co-borrower housing status?", 
+				"placeholder" : "Housing", 
+				"errormessage" : "", 
+				"required" : "Please make a selection.", 
+				"showTitle" : false,
+				"listItem":"housingList",
+				"focus": true
+			},
+			{ 
+				"id": 105, 
+				"name":"housingPayment",
+				"stateName":"CoBorrowerHousingPayment",
+				"type": "text",
+				"title" : "What is co-borrower monthly housing payment?", 
+				"placeholder" : "$0", 
+				"errormessage" : "Invalid Payment.", 
+				"required" : "Please enter Housing Payment.", 
+				"showTitle" : true,
+				"focus": true,
+				"isNumber": true
+			},
+			{ 
+				"id": 106, 
+				"name":"creditScore",
+				"stateName":"CoBorrowerCreditScore",
+				"type": "button",
+				"title" : "What is co-borrower's estimated credit score?", 
+				"placeholder" : "Estimated credit score", 
+				"errormessage" : "", 
+				"required" : "Please make a selection.", 
+				"showTitle" : false,
+				"listItem":"estimatedCreditScoreList",
+				"focus": true,
+				"listName": "estimatedCreditScoreList"
+			},
+			{ 
+				"id": 107, 
+				"name":"dateOfBirth",
+				"stateName":"CoBorrowerDateOfBirth",
+				"type": "masked-text",
+				"title" : "When was co-borrower born?", 
+				"placeholder" : "MM/DD/YYYY", 
+				"errormessage" : "Co-Borrower must be at least 18 years old.", 
+				"required" : "Please enter Birthdate", 
+				"showTitle" : true,
+				"focus": true
+			},
+			{ 
+				"id": 108, 
+				"name":"employmentStatus",
+				"stateName":"CoBorrowerEmploymentStatus",
+				"type": "button",
+				"title" : "What is co-borrower's employment status?", 
+				"placeholder" : "Employment", 
+				"errormessage" : "", 
+				"required" : "Please make a selection.", 
+				"showTitle" : true,
+				"listItem":"employmentList",
+				"focus": true,
+				"listName": "employmentList"
+			},
+			{ 
+				"id": 109, 
+				"name":"annualIncome",
+				"stateName":"CoBorrowerAnnualIncome",
+				"type": "text",
+				"title" : "Co-Borrower's Gross Annual Income", 
+				"placeholder" : "$0", 
+				"errormessage" : "", 
+				"errormessagecode" : "Insufficient Annual Income",
+				"required" : "Please enter Annual Income", 
+				"showTitle" : true,
+				"focus": true,
+				"errorCode": "MinError",
+				"isNumber": true
+			},
+			{ 
+				"id": 156, 
+				"name":"firstName",
+				"stateName":"CoBorrowerFirstName",
+				"type": "text",
+				"title" : "Co-Borrower Name", 
+				"placeholder" : "First Name", 
+				"errormessage" : "", 
+				"required" : "Please enter you first name.", 
+				"showTitle" : false,
+				"focus": true,
+				"titleClass": "col-sm-12 col-xs-12",
+				"prequalifyButtonClass": " center-align "
+			},
+			{ 
+				"id": 157, 
+				"name":"lastName",
+				"stateName":"CoBorrowerLastName",
+				"type": "text",
+				"title" : "", 
+				"placeholder" : "Last name", 
+				"errormessage" : "", 
+				"required" : "Please enter you last name.", 
+				"showTitle" : false,
+				"focus": false
+			},{ 
+				"id": 110, 
+				"name":"name",
+				"type": "group",
+				"subquestions": [156,157]
+			},
+			{ 
+				"id": 111, 
+				"name":"primaryPhoneNumber",
+				"stateName":"CoBorrowerPrimaryPhoneNumber",
+				"type": "masked-text",
+				"title" : "Co-Borrower's Primary Phone Number", 
+				"placeholder" : "(xxx) xxx-xxxx", 
+				"errormessage" : "Invalid Primary Phone Number.", 
+				"required" : "Please enter Primary Phone Number", 
+				"showTitle" : true,
+				"focus": true,
+				"col" : 6,
+				"errorCode": "CodeError"
+			},		 
+			{ 
+				"id": 112, 
+				"name":"emailAddress",
+				"stateName":"CoBorrowerEmailAddress",
+				"type": "text",
+				"title" : "Co-Borrower's Email Address", 
+				"placeholder" : "Email Address", 
+				"errormessage" : "Please enter a valid email address.", 
+				"required" : "Please enter a valid email address.", 
+				"showTitle" : true,
+				"focus": true
+			},
+			{ 
+				"id": 158, 
+				"name":"SSN",
+				"stateName":"CoBorrowerSSN",
+				"type": "masked-text",
+				"title" : "Please enter co-borrower's SSN", 
+				"placeholder" : "xxx-xx-xxxx", 
+				"errormessage" : "Invalid SSN.", 
+				"required" : "Please enter a valid SSN", 
+				"showTitle" : true,
+				"focus": true,
+				"showConsent" :true,
+				"submitForm": true
+			},
+			{ 
+				"id": 3, 
+				"name":"login",
+				"stateName":"Login",
+				"type" : "group",
+				"title" :"Login",
+				"apikey":"action=create_borrowers",
+				"action":"create_borrowers",
+				"payloadkey":
+				{
+					"wpcustom_user_email": "email",
+					"wpcustom_user_bank_slug": "woodforest",
+					"wpcustom_user_fname": "firstName",
+					"wpcustom_user_uuid": "email",
+					"wpcustom_user_pass": "password",
+					"wpcustom_user_pass_confirm": "password"
+				},
+				"subquestions": [80,81,82]
+			},
+			{ 
+			"id": 80, 
+			"name":"email",
+			"stateName":"Email",
+			"type": "login",
+			"title" : "Let's create your account.", 
+			"placeholder" : "Email Address", 
+			"errormessage" : "Please enter a valid Email Address.", 
+			"showTitle" : true,
+			"focus": true,
+			"validationRules": {
+				"required": true,
+				"isEmail":true
+			  }
+
+			
+		},
+		
+		{ 
+			"id": 81, 
+			"name":"password",
+			"stateName":"Password",
+			"type": "login",
+			"title" : "Password:", 
+			"placeholder" : "Password", 
+			"errormessage" : "Please enter a Password.", 
+			"showTitle" : false,
+			"focus": false,
+			"validationRules": {
+				"required": true
+				
+			  },
+			  "customValidation": {
+				"character": 8,
+				"lowercase":{"value":"1","rules":"[a-z]"},
+				"upercase":{"value":"1","rules":"[A-Z]"},
+				"number":{"value":"1","rules":"[0-9]"},
+				"special":{"value":"1","rules":"[!@#$%^&*]"}
+			  }
+		},
+		{ 
+			"id": 82, 
+			"name":"verifyPassword",
+			"stateName":"VerifyPassword",
+			"type": "login",
+			"title" : "Verify Password:", 
+			"placeholder" : "Verify Password", 
+			"errormessage" : "Passwords do not match!", 
+			"required" : "Please enter a Verify Password.", 
+			"showTitle" : false,
+			"focus": false,
+			"match":
+			{
+				"password": true
+			},
+			"validationRules": {
+				"required": true
+				
+			  },
+			 
+			"value":""
+
+		},
+		{ 
+			"id": 182, 
+			"name":"Registration",
+			"stateName":"Registration",
+			"type": "Button",
+			"pagetype":"Php",
+			"title" : "Registration:", 
+			"placeholder" : "Registration", 
+			"showTitle" : false,
+			"focus": false,
+			"apikey":"action=create_borrowers",
+			"action":"create_borrowers",
+			"payloadkey":
+			{
+				"wpcustom_user_email": "",
+				"wpcustom_user_bank_slug": "",
+				"wpcustom_user_fname": "",
+				"wpcustom_user_uuid": "",
+				"wpcustom_user_pass": "",
+				"wpcustom_user_pass_confirm": ""
+			},
+			"validationRules": {
+				"required": true,
+				"FirstWordCapital":true,
+				"Email":true
+			  },
+			"value":""
+
+		}
+		,
+		{ 
+			"id": 183, 
+				"name":"plaid",
+				"stateName":"Plaid",
+				"type" : "group",
+				"title" :"Bank Account Information",
+				"apikey":"action=create_borrowers",
+				"action":"create_borrowers",
+				"iFrameURL":"https://los-demo.api-dataview360.com/plaid.php",
+				"payloadkey":
+				{
+					"wpcustom_user_email": "email",
+					"wpcustom_user_bank_slug": "woodforest",
+					"wpcustom_user_fname": "firstName",
+					"wpcustom_user_uuid": "email",
+					"wpcustom_user_pass": "password",
+					"wpcustom_user_pass_confirm": "password"
+				},
+				"subquestions": [184,185],
+				"isContinue":false
+
+		},
+		{ 
+			"id": 184, 
+			"name":"ProceedwithPlaid",
+			"stateName":"ProceedwithPlaid",
+			"type": "plaid",
+			"title" : "Proceed with Plaid", 
+			"iFrameURL":"https://los-demo.api-dataview360.com/plaid.php",
+			"actionButtonText": "Procced without Plaid"
+		},
+		{ 
+			"id": 185, 
+			"name":"ProccedwithoutPlaid",
+			"stateName":"ProccedwithoutPlaid",
+			"type": "singlebutton",
+			"title" : "Procced without Plaid", 
+			"placeholder" : "Procced without Plaid", 
+			"errormessage" : "", 
+			"showTitle" : false,
+			"focus": true
+			
+		},
+		{ 
+			"id": 186, 
+			"name":"bankDetails",
+			"type" : "group",
+			"title" :  "Bank Address",
+			"subquestions": [187,188,189]
+		},
+		{ 
+			"id": 187, 
+			"name":"bankName",
+			"stateName":"BankName",
+			"type" : "text",
+			"title" : "Bank Name",  
+			"placeholder" : "Bank Name", 
+			"errormessage" : "", 
+			"required" : "Please enter bank name", 
+			"showTitle" : false,
+			"focus": true,
+			"display":false
+		},
+		{ 
+			"id": 188,
+			"name":"bankRoutingNumber",
+			"stateName":"BankRoutingNumber",
+			"type" : "text",
+			"title" : "Bank Routing Number",  
+			"placeholder" : "xxxxxxxxx", 
+			"errormessage" : "", 
+			"required" : "Please enter bank routing number", 
+			"showTitle" : false,
+			"focus": true,
+			"display":false
+		},
+		{ 
+			"id": 189, 
+			"name":"bankAccountNumber",
+			"stateName":"BankAccountNumber",
+			"type" : "text",
+			"title" : "Bank Account Number",  
+			"placeholder" : "xxxxxxxxxx-xx", 
+			"errormessage" : "", 
+			"required" : "Please enter bank account number", 
+			"showTitle" : false,
+			"focus": true,
+			"display":false
+		}
+		
+		
+	],
+        "versions" : [
+            { 
+                "versionNumber" : "default",
+				"questions" : {
+					
+					"borrower": [1,2,10,182,4,5,6,183,186,8,9,11,12,58],
+					"coborrower": [103,104,105,106,107,108,109,110,111,112,158],
+					"extended": [ 39, 40 ]
+				}          
+            },  
+            { 
+				"versionNumber" : "1",
+				"questions" : {
+					"borrower": [12,13,16,17,18,19,1,2,8,9,20,10,11],
+					"extended": [ 39 ]
+				}                   
+            }		 
+		]
+		
+}

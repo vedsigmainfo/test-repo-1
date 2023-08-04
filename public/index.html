@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Página {{X}} de la aplicación | Jesús Obrero Cooperativa</title>
+    <!-- <title>App Page {{X}} | Jesús Obrero Coopertiva CC</title> -->
+
+    <!-- <link rel="stylesheet" type="text/css" href="bootstrap.css"> -->
+    <!-- Please remove the bootstrap.css file when you integrate the design into primerates application. its taken from the same.-->
+    <link
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      src="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="https://35.170.6.109/wp-content/themes/astra/assets/css/minified/style.min.css?ver=1.8.4"> -->
+    <!-- Add these below css files to your code base-->
+    <!-- <link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="range-slider.css"> -->
+
+    <script
+      type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyANpZbWlnVftI-HYTH8YdmqDBbjIvUndOs&libraries=places&sensor=false"
+    ></script>
+    <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+
+    <script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+    <script src="https://cdn.getpinwheel.com/pinwheel-v2.3.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-111752169-1", "auto");
+      ga("send", "pageview");
+    </script>
+  </head>
+
+  <body id="offer-root" class="custom-background">
+    <section class="fr-contents clearfix" id="root"></section>
+    <script>
+      window.cdn = "dev.primerates.com/";
+      //window.loanAmount = '3000';
+
+      window.PLPQJSONConfigPath =
+        "/static/json/GDS_LOS_Engine_Version_Config_HELOC_V001.json";
+      window.ExtendLoanAppJSONVersionConfigPath =
+        "/static/json/GDS_LOS_Engine_Version_Config_HELOC_V001.json";
+      //window.loanPurpose = "CONSOLIDATE_DEBT";
+      window.partnerId = "1";
+      window.featured = "1";
+      window.affiliateid = "";
+      window._paq = [];
+      window.IsExtended = "0";
+      window.formSubmissionCount = 0;
+      window.docusignUrl =
+        "https://demo.docusign.net/Signing/MTRedeem/v1/4cd7cb11-58c5-4a33-98ea-4944281dfbce?slt=eyJ0eXAiOiJNVCIsImFsZyI6IlJTMjU2Iiwia2lkIjoiNjgxODVmZjEtNGU1MS00Y2U5LWFmMWMtNjg5ODEyMjAzMzE3In0.AQYAAAABAAMABwAAu7AhHWfbSAgAAFvCqD5n20gYAAEAAAAAAAAAIQC9AgAAeyJUb2tlbklkIjoiYzMyZjkwZDAtOGYyMy00MzZhLWFlNTctN2Q1MDgxZGRkZjAxIiwiRXhwaXJhdGlvbiI6IjIwMjMtMDYtMDdUMDY6MTA6MDIrMDA6MDAiLCJJc3N1ZWRBdCI6IjIwMjMtMDYtMDdUMDY6MDU6MDIuNTEzMTM5NCswMDowMCIsIlJlc291cmNlSWQiOiJhOWNiZGJjYy05OGQ0LTRjODAtOGY0YS1jYWMxNmU1ODZiZjkiLCJSZXNvdXJjZXMiOiJ7XCJFbnZlbG9wZUlkXCI6XCJhOWNiZGJjYy05OGQ0LTRjODAtOGY0YS1jYWMxNmU1ODZiZjlcIixcIkFjdG9yVXNlcklkXCI6XCIwYThkYzczYi01Zjg5LTRlZTItYTk4Ni0yZjk5ZjlkNzRlN2FcIixcIlJlY2lwaWVudElkXCI6XCIwYTI3OTNjMy02Y2YxLTRlNjctODJhMS05MTZlOTRiMmMzNWRcIixcIkZha2VRdWVyeVN0cmluZ1wiOlwidD1lNDk2OGEwMi0xOWZmLTRlNTItYTM1OC02Zjg3ZDQ4NmNlMjJcIixcIkludGVncmF0b3JLZXlcIjpcImJlNWJjYjE3LTE4NzUtNGYwYy1hOGUyLTNkN2Q1MjQ4ODdmMlwifSIsIlRva2VuVHlwZSI6MSwiQXVkaWVuY2UiOiIyNWUwOTM5OC0wMzQ0LTQ5MGMtOGU1My0zYWIyY2E1NjI3YmYiLCJSZWRpcmVjdFVyaSI6Imh0dHBzOi8vZGVtby5kb2N1c2lnbi5uZXQvU2lnbmluZy9TdGFydEluU2Vzc2lvbi5hc3B4IiwiSGFzaEFsZ29yaXRobSI6MCwiSGFzaFJvdW5kcyI6MCwiVG9rZW5TdGF0dXMiOjAsIklzU2luZ2xlVXNlIjpmYWxzZX0_AICC6NMdZ9tI.z86Dfjglq_MA-P2FYdFbschcVjyl5XOYioFkdtNHVyZHmicdA6CHA52DzF5IsdhYKCIOR0pREAaCy0g9mCo9Ilt51qJ7XdRYGq7f6izCCTsPX5szflHDwi6K9i__9PCVAT8fbVsN6O1oHPmxZhj0lv8OTsEf_AKnLK7yBj4iJqhj6fUb16NjG6Yj6aKgX3NQDyC2Je_dlvoDuVZDOBdMgIq07GWNXPK_WAWRDJE1zwZeKFOmfz11ACHq3R-9QFldHrh5nIpo7ieQQLba2dqutPQXio6kwIFD2R9QqmBVpxaV1iJ6vcqHm5NuOIQY9AY_qwF03HIgkMEgCkV1Qn5PTQ";
+      //   window.applicationRequiredAction='<ul  class="application-doc"><li >Cargar una Foto ID y un Estado de Cuenta Bancario</li><li >Cargar evidencia de la física</li></ul>';
+      window.autoVehicleDataConfigPath = "Auto";
+      window.isRegisteredUser = "true";
+      window.isExistingUser = "true";
+      window.isFullTime = "true";
+      window.annualIncome = "2000";
+      window.DoAppStatus = "Requesting for Bank Statements and Payment Stubs";
+      //   window.bankPayStatus = "Bank Statement";
+      window.bankPayStatus = "Paystubs";
+      //   window.bankPayStatus = "Both";
+      // window.postData =  { loanamount : "5000", email: "sanjay.m@sigmainfo.net", housing : "OWN_NO_MORTGAGE" ,phonenumber : "2013585490",
+      // firstname: "sanjay",lastname:"malvi", streetaddress:"12th Main", appartment: "", city:"Roseville",
+      // state:"Michigan",zipcode:"48066",birthdate:'04/03/1980', ssn:"666484418",annualincome:'100000', creditscore:'720-850',
+      // currenttime:'More than 3 years', employment:'Full_Time', housingPayment: '', loanPurpose:'Debt Consolidation', affiliateTrackingID : "track-101",
+      // cbloanamount : "5000", cbemail: "sanjay.m@sigmainfo.net", cbhousing : "OWN_NO_MORTGAGE" ,cbphonenumber : "2013585490",
+      // cbfirstname: "sanjay",cblastname:"malvi", cbstreetaddress:"12th Main", cbappartment: "", cbcity:"Roseville",
+      // cbstate:"Michigan",cbzipcode:"48066",cbbirthdate:'04/03/1980', cbssn:"666484418",cbannualincome:'100000', cbcreditscore:'720-850',
+      // cbcurrenttime:'More than 3 years', cbemployment:'Full_Time', cbhousingPayment: '', cbloanPurpose:'Debt Consolidation', cbaffiliateTrackingID : "track-101"            };
+      // window.EmploymentData = { "borrower" : {'employerName' :'Sigma','position': 'SE','startDate': '01/24/2010','endDate': '01/01/2011','salaryAmount': '2342','salaryFrequency': 'weekly','employerStreetAddress': ' Perry Street','apartment': '','employerCity': 'Roseville','employerState': 'Michigan','employerZipcode': '48066','employerPhone': '7023585490'},
+      //                           "coborrower" : {'cbemployerName' :'Sigma','cbposition': 'SE','cbstartDate': '01/24/2010','cbendDate': '01/01/2011','cbsalaryAmount': '2342','cbsalaryFrequency': 'weekly','cbemployerStreetAddress': ' Perry Street','cbapartment': '','cbemployerCity': 'Roseville','cbemployerState': 'Michigan','cbemployerZipcode': '48066','cbemployerPhone': '7023585490'}
+      // }
+
+      window.postDataEngine = {
+        request: {
+          transactionType: "CreditDecision",
+          currentTime: "",
+          gclid: "",
+          loanAmount: "2000",
+          loanPurpose: "Medical Expense",
+          emailAddress: "nisybozob@mailinator.com",
+          partnerId: "",
+          uuid: "14e88332-54d6-4619-9818-efd86a092057",
+          programId: "",
+          featured: "",
+          affiliateId: "",
+          deviceType: "Web",
+          browser: "chrome",
+          os: "UNIX",
+          applicationId: "C0B13D57-D8C1-42AA-AFE7-F8CD9BA2E521",
+          ipAddress: "115.242.252.238",
+          senderDomain: "creditcorp-dev-wp.api-dataview360.com",
+          bankRoutingNumber: "",
+          bankAccountNumber: "",
+          identification: "",
+          reusableOffer: "",
+          lenderId: "",
+          offerDate: "",
+          campaignId: "",
+          coBorrowerRequired: "",
+          applicationUuid: "",
+          hSessionId: "",
+          prsessionid: "",
+          mpUniqueClickID: "",
+          borrowers: [
+            {
+              address1: "1909 Spring Road",
+              address2: "",
+              city: "Oak Brook",
+              state: "Illinois",
+              zipCode: "60521",
+              housingStatus: "OWN_WITH_MORTGAGE",
+              housingPayment: "1234",
+              dateOfBirth: "1999-11-01",
+              employmentStatus: "FULL_TIME",
+              annualIncome: "120000",
+              firstName: "Sonia",
+              lastName: "Landry",
+              primaryPhoneNumber: "7874725353",
+              emailAddress: "nisybozob@mailinator.com",
+              ssn: "666000000",
+              agreePqTerms: "true",
+              agreeTCPA: "true",
+              secondaryPhoneNumber: "",
+              primaryBorrower: "",
+              military: "",
+              citizenship: "",
+              location: "",
+              education: "",
+              employmentInformation: [
+                {
+                  employerName: "Test",
+                  employerPhoneNumber: "7874725353",
+                },
+              ],
+            },
+          ],
+          formSubmissionCount: "",
+          accountNumber: "",
+          loanTerm: "",
+          productType: "personalLoan",
+          brandName: "GDSLink",
+          pinWheelStatus: "",
+          plaidStatus: "",
+          agreementTerms: "true",
+          agreeTCPA: "true",
+          agreeWWTC: "true",
+          offerId: "293A7FE1-A0F5-4FDC-9FAC-2E52CF0820F5",
+          estimatedRepayment: "139.27",
+        },
+      };
+
+      // window.BankData = {
+      //   'accountNumber' : 12345678901, 'routingNumber': 123456789
+      // }
+      window.themeConfig = {
+        host: "dev.woodforest.primerates.com",
+        slug: "gdslink",
+        theme: "prime-rates-woodforest",
+        theme_name: "GDSLink",
+        logo: "/wp-content/themes/prime-rates-gdslink/images/headerlogo.png",
+        breadcrumb_css: "BCStyles-woodforest.css",
+        leadcheck_css: "leadcheck-woodforest.css",
+        leadcheck_transition_css: "transition-woodforest.css",
+        breadcrumb_transition_css: "transition-woodforest.css",
+        offer_css: "offer-woodforest-style.css",
+        lenderoffer_css: "lenderoffers-woodforest-style.css",
+        plaid_url: "https://dev.woodforest.primerates.com/plaid.html",
+        document_text:
+          "We require identification in the form of a valid picture ID (drivers license, passport, state ID or voter ID) and the most recent bank statements for the account you entered in the previous step.<br><br>Please upload your documents using the inputs below.",
+        bank_text_top:
+          "In order to verify your bank account, we partner with Plaid. Plaid is a trusted service that is widely used by most major U.S. Banks. It allows you to log into your bank and choose the bank account in which you would like to have your loan proceeds distributed. Click below to proceed.",
+        bank_text_bottom:
+          "If you are unable to access your bank via Plaid, you may click the 'Proceed without Plaid' button below (this will require a manual review of your bank account and could delay your funds).",
+        document_thank_you:
+          "We will get back to you once we verify your details. Thank You!",
+        login_header: "Great choice!",
+        login_header_bottom: "Let's create your account.",
+        login_tooltip:
+          "Please enter a password that meets the following requirements:  - At least 8 characters long, - At least 1 capital letter, - At least 1 number, - At least 1 special character (!@#$%^&*).",
+        TILA_page:
+          "<h3 style='font-weight:500;text-align:center;'>You're almost finished! </h3><h4 class='paragraph-heading'>We just need your signature and initials on a couple of documents and we'll get your funds to you. </h4><h4 class='paragraph-heading'>For document signatures, we have partnered with Docusign. When you click the Proceed button below, you will be transferred to Docusign. Once there, simply click the yellow start button and sign and initial as prompted. When you are finished, you will be returned here.</h4>",
+        coBorrowerHaderText: "(Co-Borrower included in application)",
+        consentText:
+          "<p class='CBformlist2'>I consent to <b>GDS Link</b> conducting a hard credit pull.</p>",
+        emailSendEndpoint: "/wp-admin/admin-ajax.php",
+        apiurl: "https://los-dev.api-dataview360.com/wp-admin/admin-ajax.php",
+        phoneNumberAPIKey: "86c97b1559bd320f30967010f3150b2b",
+        loadImage:
+          "/wp-content/plugins/primerate-redirection/images/PrimeRates_Icon.jpg",
+        googleAPIKey: "AIzaSyANpZbWlnVftI-HYTH8YdmqDBbjIvUndOs",
+      };
+    </script>
+  </body>
+</html>

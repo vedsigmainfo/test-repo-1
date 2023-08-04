@@ -1,0 +1,608 @@
+.container{padding-left: 15px; padding-right:15px; }
+.fr-contents {
+	background: #f2f3f7;
+}
+.transition-container {
+    position: absolute!important;
+    top: -35px!important;
+    left: 2%!important;
+    width: 94%!important;
+    height: 86vh!important;
+    margin-top: 20px;
+    background-size: 150px 150px!important;
+}
+.box-panel {	
+	vertical-align: top;
+	padding: 15px;
+	border-radius: 3px;
+	border-top: 5px solid #453e69;
+	background: #fff;
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.box-panel-transition {
+	
+	max-height: 1000px; /* approximate max height */
+	transition-property: all;
+	transition-duration: 1.0s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+	
+}
+.container{padding-left: 15px; padding-right:15px; }
+.container-box-content{
+	margin: -10px 10px 10px 10px;
+}
+.transition-container {
+    position: absolute!important;
+    top: -35px!important;
+    left: 2%!important;
+    width: 94%!important;
+    height: 86vh!important;
+    margin-top: 20px;
+    background-size: 150px 150px!important;
+}
+.box-panel {
+     
+    vertical-align: top;
+    padding: 15px;
+    border-radius: 3px;
+    border-top: 5px solid #27A9B7;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    min-height: 500px;
+
+}
+.custom-pdding {
+    float: none!important;
+    width: 50%!important;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+}
+.progreesBreadcrumb-bar{ width: 99.9%;
+    height: 15px;
+    margin: 20px 0 0 0px;
+    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)!important;
+}
+.progreesBreadcrumb-bar li{list-style-type: none;display: inline-block;height: 15px;background: #f2f3f7;width: 7.69%;margin: 0px;padding: 0px;border: 0px solid #e9eaed;float: left;}
+.done-progress {
+    background-color: #27BEC1 !important;
+}
+.progreesBreadcrumb-bar-text.second-phase-done {text-align: center; width: 100% !important;}
+#breadcrumb-preloader-preloader .button-align {
+    padding: 10px 15px 0px 12px;
+}
+#breadcrumb-preloader-preloader .select-control-align {
+    padding: 10px 0px 0px 3px;
+}
+#breadcrumb-preloader-preloader .text-control-align {
+    padding: 5px 14px 0px 20px;
+}
+#breadcrumb-preloader-preloader .button-control-align {
+    padding: 10px 14px 0px 20px;
+    
+}
+
+.access-offer-top-margin {
+	margin-top: 20px;
+}
+.container-box-content{
+	margin: -10px 10px 10px 10px;
+}
+.firstSection {
+	margin-top: 15px;
+}
+.firstSectionContent p {
+	margin: 5px 0px;
+    line-height: 20px;
+    padding-bottom: 10px;
+}
+p.tick {
+	padding-left: 25px;	 
+	background: url(images/icons/pq-tick.png) no-repeat left center;
+	float:left; width:100%;
+}
+.prq-logo {
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 165px;
+    width: 200px;
+}
+.app-form .form-control {
+	border-radius: 3px;
+}
+.app-form .form-control:focus {
+	border-color: #53c3bf;
+}
+.pqr-logo-img {
+	width: 150px;
+}
+.chekbox-alignment {
+	margin-top: 8px !important;
+}
+span.formerror-agreement {
+	color:red;
+}
+p.fieldname{margin: 0px 0px 5px; display:inline;font-family: auto;}
+
+.loan-app.info-tooltip{
+	border: 0;
+	border-radius: 0%;
+	color: #53c3bf !important;
+	font-size:inherit;
+}
+.loan-app.dropdown ul {
+    height: 135px;
+    overflow-y: auto;
+}
+.loan-app.dropdown ul.auto-height
+{
+	height: auto;
+}
+.info-tooltip {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	border: 1px solid #333;
+	font-size: 14px;
+	line-height: 14px;
+	color: #333 !important;
+	position: relative;
+	text-align: center;
+	margin-left:5px;
+}
+.loan-app.info-tooltip .tooltiptext {
+    visibility: hidden;
+    width: 270px;
+    background-color: #fff;
+	box-shadow:0 0 8px rgba(0,0,0,0.3);
+	color:#999;
+    text-align: center;
+    border-radius:5px;
+    padding:14px;
+    position: absolute;
+    z-index: 1;
+	left: -110px;
+	font-size:13px;
+	line-height: 15px;
+	height:auto;
+}
+.loan-app.info-tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #ccc transparent transparent  transparent;
+}
+.info-tooltip .tooltiptext {
+    visibility: hidden;
+    width: 230px;
+    background-color: #fff;
+	box-shadow:0 0 8px rgba(0,0,0,0.3);
+	color:#999;
+    text-align: center;
+    border-radius:5px;
+    padding: 20px;
+    position: absolute;
+    z-index: 1;
+    top:35px;
+    left: -110px;
+}
+.info-tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.info-tooltip .tooltiptext.tooltip-top-margin-anualincome {
+	top: -205px;
+	left: -130px;
+}
+.info-tooltip .tooltiptext.tooltip-top-margin-state {
+	top: -85px;
+    left: -125px;
+}
+.info-tooltip .tooltiptext.tooltip-top-margin-partnerlink {
+	top: -85px;
+    width: 360px !important;
+    left: -155px;
+}
+.info-tooltip .tooltiptext.tooltip-top-margin-email {
+	top: -100px;
+    left: -125px;
+}
+.info-tooltip .tooltiptext.tooltip-top-margin-send-email-message-me {
+	top:-85px;
+	width: 300px !important;
+}
+.info-tooltip .tooltiptext.tooltip-top-margin-send-email-message-meHW {
+	top:-100px;
+	width: 300px !important;
+}
+.tooltip-width-call-text-me {
+	width: 105px !important;
+	margin-left: 0px !important;
+}
+.tooltip-width {
+	width: 60px !important;
+	margin-left: 0px !important;
+}
+.info-tooltip .tooltiptext.tooltip-top-margin-call-text-me {
+	top:-295px;
+    width: 300px !important;
+    left: -101px;
+}
+span.formerror {
+    font-size: 11px;
+    color:red;
+    float:right;
+}
+.app-form .form-control {
+	border-radius: 3px;
+}
+.app-form .form-control:focus {
+	border-color: #53c3bf;
+}
+.form-control {	height: 40px !important;}
+.state-align {
+	float:right;
+}
+.top-margin-error-message {
+	margin-top: 6px;
+	clear: both;
+}
+span.formerror.has-error-mac {
+	font-size: 11px;
+	color: red;
+	 float: none !important; 
+	display: block;
+	position: relative;
+	text-align: right;
+}
+.has-error {border-color:red !important; color:red !important; border: 1px solid;}
+.form-control.has-error:focus { box-shadow:inset 0 2px 2px 0 rgba(0,0,0,.15);border-color:red !important; color:red !important; }
+.select-disabled { background-color: #eee !important; cursor: not-allowed !important; }
+.address-margin {
+	margin-top: 29px !important;
+}
+.hr-size {
+    border: 1px solid black;
+    height: 2px;
+    background-color: black;
+    margin-top: -8px;
+}
+.credit-soup-line-height {
+    line-height: 18px;
+    font-size: 14px;
+    font-family: auto;
+    font-weight: 200;
+}
+a.col-sm-6.credit-soup-line-height:hover
+{
+	color: #45A4A1 !important
+}
+.edit-icon-size {
+	font-size:30px;
+}
+.intercom-loanpurpose-label {
+	float: left;
+}
+.intercom-error-topmargin {
+	margin-top: 9px;
+}
+.checkbox-title{
+	margin-left: 10px !important;
+}
+.tooltip-width-send-email-message-me {
+	width: 150px !important;
+	margin-left: 0px !important;
+}
+.underline-on-hover:hover {
+	text-decoration: underline !important;
+}
+#formbutton {
+    padding-bottom: 33px;
+}
+.all-error-message {
+	height: 40px;
+}
+.btn.btn-primary 
+{
+	border-radius: 4px !important;
+	color: #fff !important;
+	font-size: 16px !important;
+	font-weight: 600 !important;
+	padding: 5px 30px !important;
+	border-width: 0 !important;
+	min-width: 140px;
+	/* border: 3px solid white !important; */
+	box-shadow: 5px 5px 15px lightgrey !important;
+}
+.btn.btn-primary.intercome-button {
+	font-size: 20px !important;
+	padding: 20px 40px !important;
+}
+
+
+.wrapper.state {
+	width: 90% !important;
+    height: 23%!important;
+}
+.wrapper {display: block; margin: 10px auto;  min-width: 300px; width: 40%; text-align: center;    padding: 20px;background: #FFF;height: 540px !important}
+.wrapper { text-align: center;box-sizing: unset;}
+.wrapper .fa { font-size: 350px !important;}
+
+.wrapper .fa.safari {
+    font-size: 200px !important;
+    right: 0;
+    margin-top: 10px;
+    margin-left: -5px;
+}
+
+
+button[type=button]:hover ,button[type=submit]:hover 
+{
+	border-radius: 4px !important;
+	color: #fff !important;
+	font-size: 16px !important;
+	font-weight: 600 !important;
+	padding: 5px 30px !important;
+	border-width: 0 !important;
+	background: #45A4A1 !important;
+	min-width: 140px;
+	/* border: 3px solid white !important; */
+	box-shadow: 5px 5px 15px lightgrey !important;
+}
+
+
+
+@supports (-ms-ime-align: auto) {.container {max-width: 1195px;}}
+
+/* Mobile Content */
+
+@media (max-width:1024px) {
+    .pqr-logo-img {
+        margin-top: 20px;
+    }
+    .checkbox-title{
+		margin-top: -30px !important;
+    	margin-left: 20px !important;
+	}
+	.checkbox input[type="checkbox"] {
+		float: none;
+		margin-left: none; 
+    }
+    .pre-checkbox {
+		float: left !important;
+    }
+    
+}
+@media (max-width:991px) {
+    .box-panel-transition {
+	
+        max-height: 1000px; /* approximate max height */
+        transition-property: all;
+        transition-duration: 1.0s;
+        transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    }
+    .prq-logo {
+		text-align: center;
+		width: 100%;
+		height: 85px;
+		display: block;
+		overflow: hidden;
+    }
+    .pqr-logo-img {
+        width: 150px;
+    }
+    h4.formerror {
+		padding-right: 5px;
+    	padding-left: 5px;
+    }
+    .checkbox-title{
+		margin-top: -30px !important;
+    	margin-left: 20px !important;
+	}
+	.checkbox input[type="checkbox"] {
+		float: none;
+		margin-left: none; 
+    }
+    .pre-checkbox {
+		float: left !important;
+    }
+    
+}
+@media (width: 800px ) {
+    .box-panel-transition {max-height: 770px; }
+}
+@media (max-width:800px) {
+    .progreesBreadcrumb-bar {
+        width: 100%;
+        height: auto;
+        /* margin: 0px 0px !important; */
+       }
+       .custom-pdding {float: none !important;width: 100% !important;margin: 15px 0px 0px 0px;text-align: center;padding: 0px;}
+       .box_item{
+        display: block;
+        margin: 10px auto;
+        min-width: 255px;
+        width: 90%;
+        text-align: center;
+        padding: 0px;
+        height: auto !important; 
+    }
+}
+@media only screen and (device-width: 768px) {
+    .btn.btn-primary { width: 100% !important; }
+}
+@media (max-width:767px) {
+    .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .prq-logo {
+		text-align: center;
+		width: 100%;
+		height: 85px;
+		display: block;
+		overflow: hidden;
+    }
+    .pqr-logo-img {
+            width: 150px;
+    }
+    h4.formerror {
+            padding-right: 5px;
+            padding-left: 5px;
+    }
+    .checkbox-title{
+		margin-top: -30px !important;
+    	margin-left: 20px !important;
+	}
+	
+	.checkbox input[type="checkbox"] {
+		float: none;
+		margin-left: none; 
+		
+    }
+    .pre-checkbox {
+		float: left !important;
+    }
+    .btn.btn-primary { width: 100% !important; }
+    .wrapper {
+        display: block;
+        margin: 40px auto;
+        min-width: 255px;
+        width: 25%;
+        /* border: 1px solid #ccc; */
+        padding: 20px;
+        height: 500px !important;
+    }
+    
+  
+    
+}
+@media (width:736px) {
+    .btn.btn-primary { width: 100% !important; }
+}
+@media (width: 600px) {
+    .box-panel-transition {max-height: 770px; }
+    .btn.btn-primary { width: 100% !important; }
+    .btn.btn-primary.intercome-button {
+		font-size: 20px !important;
+		padding: 20px 40px !important;
+	}
+}
+@media (max-width:479px ) {
+	.fr-contents {
+		background: #f2f3f7;
+		padding: 0px;
+	 }
+    .prq-logo {
+		text-align: center;
+		width: 100%;
+		height: 85px;
+		display: block;
+		overflow: hidden;
+    }
+    .pqr-logo-img {
+            width: 150px;
+    }
+    .info-tooltip .tooltiptext{left:inherit;right:-20px}
+    .info-tooltip .tooltiptext::after{left:inherit;right:30px;}
+    h4.formerror {
+		padding-right: 5px;
+    	padding-left: 5px;
+    }
+    .checkbox-title{
+		margin-top: -30px !important;
+    	margin-left: 20px !important;
+	}
+	
+	.checkbox input[type="checkbox"] {
+		float: none;
+		margin-left: none; 
+		
+    }
+    .pre-checkbox {
+		float: left !important;
+    }
+    .loan-app.info-tooltip .tooltiptext-partner {
+		left: -190px;
+    }
+    .loan-app.info-tooltip .tooltiptext-send-email-message-me {
+		left: -40px;
+    }
+    .loan-app.info-tooltip .tooltiptext-call-text-me {
+		left: -40px;
+    }
+    .btn.btn-primary { width: 100% !important;  }
+	.btn.btn-primary.intercome-button {
+		font-size: 20px !important;
+		padding: 20px 40px !important;
+    }
+		
+}
+@media (width:414px) {
+    .btn.btn-primary { width: 100% !important; }
+	.btn.btn-primary.intercome-button {
+		font-size: 20px !important;
+		padding: 20px 40px !important;
+    }
+   
+}
+@media (width:375px) {
+    .btn.btn-primary { width: 100% !important;  }
+	.btn.btn-primary.intercome-button {
+		font-size: 20px !important;
+		padding: 20px 40px !important;
+    }
+    
+}
+@media (max-width:359px) {
+    .btn.btn-primary { width: 100% !important; }
+	.btn.btn-primary.intercome-button {
+		font-size: 20px !important;
+		padding: 20px 40px !important;
+	}
+    .box-panel h3,.box-panel h4{text-align: center;}
+    .prq-logo {
+		text-align: center;
+		width: 100%;
+		height: 85px;
+		display: block;
+		overflow: hidden;
+    }
+    .pqr-logo-img {
+            margin-top: 20px !important;
+    }
+    h4.formerror {
+            padding-right: 5px;
+            padding-left: 5px;
+    }
+    .checkbox-title{
+		margin-top: -30px !important;
+    	margin-left: 20px !important;
+	}
+	
+	.checkbox input[type="checkbox"] {
+		float: none;
+		margin-left: none; 
+		
+    }
+    .pre-checkbox {
+		float: left !important;
+    }
+    
+}
+@media (max-width:320px) {
+    .heading-iphone-5 { padding-top: 10px !important; }
+    .title-iphone-5 { font-size: 20px; line-height: 0.5rem;}
+    .btn.btn-primary { width: 100% !important;}
+	.btn.btn-primary.intercome-button {
+		font-size: 20px !important;
+		padding: 20px 40px !important;
+    }
+    
+    
+}

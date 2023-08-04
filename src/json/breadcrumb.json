@@ -1,0 +1,49 @@
+{
+  "applications": [
+    {
+      "version-1": {
+        "elements": [
+          {
+            "pageNumber": 1,
+            "type": "text",
+            "name": "loanamount",
+            "title": "Loan Amount",
+            "placeholder": "$5,000",
+            "validation": {
+              "minValue": 5000,
+              "maxValue": 100000,
+              "errorMessage": "Please enter a value between X and Y.",
+              "required": true
+            }
+          },
+          {
+            "pageNumber": 2,
+            "type": "text",
+            "name": "firstname",
+            "title": "First Name",
+            "placeholder": "First Name",
+            "validation": {
+              "min": 0,
+              "max": 50,
+              "errorMessage": "required",
+              "required": true
+            }
+          },
+          {
+            "pageNumber": 3,
+            "type": "text",
+            "name": "lastname",
+            "title": "Last Name",
+            "placeholder": "Last Name",
+            "validation": {
+              "min": 0,
+              "max": 50,
+              "errorMessage": "required",
+              "required": true
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

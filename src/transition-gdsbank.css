@@ -1,0 +1,136 @@
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    /* overflow: auto; Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: transparent;
+     /* margin: 15% auto; = 15% from the top and centered */
+    padding: 10px;
+    width: 50%; /* Could be more or less, depending on screen size */
+    margin: 0 auto;
+}
+.wrapper .fa { font-size: 15px !important;
+    margin-left: 10px;
+    margin-top: 0px;
+    color: #53c3bf;
+    font-size: 15px !important;
+    right: 0;
+}
+.wrapper .fa.fa-spin.fa-refresh {
+    font-size: 205px !important; 
+    color: #010004;
+    background: linear-gradient(135deg, #010004 0%, #7B78A5 100%);
+    margin-top: 10px;
+    font-size: 200px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+.wrapper.address {width: 80%}
+.wrapper.state {
+	width: 90% !important;
+    height: 23%!important;
+}
+.wrapper.loans.zaleaPopup {
+    height: 200px !important;
+}
+.trans-statment img { display: inline-block;}
+.trans-statment p { display: inline-block; vertical-align: top; font-size: 20px;  margin-left: 4px;}
+
+
+/* linear-gradient(135deg, #7B78A5 0%, #010004 100%)!important; */
+
+
+@media (max-width:800px) {
+}
+@media (max-width:480px) {
+
+    .modal-content {
+        background-color: transparent;
+        padding: 10px 0px 0px 5px;
+        width: 58% !important;
+        margin: 25px 75px 25px 25px !important;
+        height: 51%;
+         
+        display: inline-block;
+         
+        padding-right: -4px;
+    }
+    
+    .wrapper .fa.fa-spin.fa-refresh {
+        font-size: 205px !important; 
+        color: #010004;
+        background: linear-gradient(135deg, #010004 0%, #7B78A5 100%);
+        margin-top: 21px;
+        font-size: 200px;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .img {
+        vertical-align: inherit;
+        /* float: left; */
+        width: 200px !important;
+        /* font-size: 0px; */
+        }
+    
+}
+   
+ 
+
+@media (max-width:420px) {
+ 
+    .modal-content {
+        background-color: transparent;
+        /* margin: 15% auto; = 15% from the top and centered */
+       padding: 10px 0px 10px 8px;
+       width: 75% !important; /* Could be more or less, depending on screen size */
+       margin: 0 auto;
+    }
+    .wrapper {
+        display: block;
+        margin: 0 -25px;
+        min-width: 260px;
+        width: 100%;
+        /* text-align: center; */
+        padding: 20px 20px 20px 20px;
+        background: #FFF;
+        height: auto !important;
+    }
+    .website-text{ position: relative;display: inline-block;}
+}
+@media (max-width:375px) {
+    .modal-content {
+        background-color: transparent;
+        /* margin: 15% auto; = 15% from the top and centered */
+        padding: 10px 0px 10px 7px;
+        width: 70% !important; /* Could be more or less, depending on screen size */
+       margin: 0 58px;
+    }
+}
+@media (max-width:320px) {
+    .modal-content {
+        background-color: transparent;
+        /* margin: 15% auto; = 15% from the top and centered */
+       padding: 10px 0px 10px 1px;
+       width: 70%!important; /* Could be more or less, depending on screen size */
+       margin: 0 48px;
+    }
+    .wrapper {
+        display: block;
+        margin: 0 -25px;
+        min-width: 225px;
+        width: 100%;
+        /* text-align: center; */
+        padding: 20px 20px 20px 20px;
+        background: #FFF;
+        height: auto !important;
+    }
+}
